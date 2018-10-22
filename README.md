@@ -1,1 +1,2 @@
-# dot_files
+# dot_files  for Linux, Mac Application
+
