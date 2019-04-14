@@ -118,6 +118,8 @@ let g:ale_sign_column_always = 1
 "
 " }}}
 
+source $HOME/.config/nvim/grepper-config/basic.vim
+
 " https://github.com/autozimu/LanguageClient-neovim
 let g:LanguageClient_serverCommands = {
     \ 'python': ['/usr/local/bin/pyls'],
