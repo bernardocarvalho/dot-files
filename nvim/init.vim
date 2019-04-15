@@ -58,9 +58,10 @@ if dein#load_state('~/.cache/dein')
 endif
 
 " == General Configuration ==
-syntax enable
+syntax enable       " Turn on syntax highlighting
 
-" System mappings  ----------------------------------------------------------{{{
+" System mappings  ----------------------------------------------------------
+"{{{
 " leader is ,
 let mapleader = ','
 " Fuzzy Find in normal mode
@@ -86,9 +87,10 @@ set incsearch
 " When searching try to be smart about cases
 set smartcase
 
-set mouse=a                " Enable mouse usage (all modes)
-" set mouse=v                 " middle-click paste with mouse
+set mouse=a                 " Enable mouse usage (all modes)
+" set mouse=v               " middle-click paste with mouse
 set hlsearch                " highlight search results
+set cursorline              " Highlight the current line
 " ================ Indentation ======================
 set autoindent              " indent a new line the same amount as the line just typed
 set smartindent
@@ -96,12 +98,17 @@ set tabstop=4               " number of columns occupied by a tab character
 set softtabstop=4           " see multiple spaces as tabstops so <BS> does the right thing
 set expandtab               " converts tabs to white space
 set shiftwidth=4            " width for autoindents
+" ================= Folding  ===============
+set foldmethod=syntax   "  indent, marker 
+autocmd BufRead * normal zR " keep the folds open as you open new files, zM - close all folds
 
-set number                  " add line numbers
+set number                  " Show line numbers
 set wildmode=longest,list   " get bash-like tab completions
 set cc=80                   " set an 80 column border for good coding style
 
-filetype plugin indent on
+filetype indent on    " Use filetype indentation
+filetype plugin indent on " Allow plugins to use filetype indentation
+
 let g:python3_host_prog = '/usr/local/bin/python3.7'
 let g:python_host_prog = '/usr/bin/python2'
 
@@ -116,8 +123,7 @@ let g:NERDTreeQuitOnOpen = 1
 
 "}}}
 
-let g:neomake_open_list = 2
-
+" let g:neomake_open_list = 2
 
 let g:deoplete#enable_at_startup = 1
 
@@ -145,7 +151,7 @@ let g:ale_lint_on_enter = 1         " default
 let g:ale_lint_on_filetype_changed = 1 " default:w
 let g:ale_sign_column_always = 1
 
-" ########## C / C++
+" ########## C / C++  #############
 
 "
 " }}}
