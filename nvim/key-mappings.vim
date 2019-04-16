@@ -14,3 +14,7 @@
     nnoremap <silent> <leader>gi :Git add -p %<CR>
 ""        nnoremap <silent> <leader>gg :SignifyToggle<CR>
 "}
+"
+
+"   ,,            <Plug>(easymotion-prefix)
+"   ,sv         * :source ~/.vimrc<CR>
