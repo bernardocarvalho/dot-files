@@ -19,7 +19,7 @@ if dein#load_state('~/.cache/dein')
         call dein#add('roxma/nvim-yarp')
         call dein#add('roxma/vim-hug-neovim-rpc')
     endif
- 
+
     call dein#add('junegunn/fzf', { 'build': './install --all', 'merged': 0 })
     call dein#add('junegunn/fzf.vim', { 'depends': 'fzf' })
 
@@ -70,9 +70,10 @@ syntax enable       " Turn on syntax highlighting
 set termguicolors
 set background=dark  " or "ligth"
 colorscheme NeoSolarized
-
 " colorscheme solarized8
 
+let g:gitgutter_override_sign_column_highlight = 0
+let g:gitgutter_max_signs = 500  " default value
 
 " System mappings  ----------------------------------------------------------
 "{{{
@@ -164,7 +165,7 @@ let g:ale_lint_on_enter = 1         " default
 let g:ale_lint_on_filetype_changed = 1 " default:w
 let g:ale_sign_column_always = 1
 
-"  ############## Neoformat ########## 
+"  ############## Neoformat ##########
 " Not realy working...
 "let g:neoformat_python_autopep8 = {
 "            \ 'exe': ['autopep8'],
