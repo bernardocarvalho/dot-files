@@ -19,20 +19,21 @@ if dein#load_state('~/.cache/dein')
         call dein#add('roxma/nvim-yarp')
         call dein#add('roxma/vim-hug-neovim-rpc')
     endif
-    
+ 
     call dein#add('junegunn/fzf', { 'build': './install --all', 'merged': 0 })
     call dein#add('junegunn/fzf.vim', { 'depends': 'fzf' })
 
     call dein#add('tpope/vim-unimpaired')
     call dein#add('tpope/vim-fugitive', {'on_cmd' : 'Gstatus'})
+    call dein#add('airblade/vim-gitgutter') " shows a git diff in the gutter (sign column)
     call dein#add('easymotion/vim-easymotion')
     call dein#add('tpope/vim-surround')
-    
+
     call dein#add('Yggdroot/indentLine')
     call dein#add('junegunn/vim-easy-align')
     " displays tags in a window, nmap <F8> :TagbarToggle<CR>
-    call dein#add('majutsushi/tagbar')  
-    call dein#add('ludovicchabant/vim-gutentags')  " manages  tag files 
+    call dein#add('majutsushi/tagbar')
+    call dein#add('ludovicchabant/vim-gutentags')  " manages  tag files
     call dein#add('elzr/vim-json')
     call dein#add('scrooloose/nerdtree')
     call dein#add('tomtom/tcomment_vim')
@@ -45,25 +46,33 @@ if dein#load_state('~/.cache/dein')
     call dein#add('w0rp/ale')
     call dein#add('tpope/vim-dispatch')
     call dein#add('radenling/vim-dispatch-neovim')
-    
+
     call dein#add('sbdchd/neoformat')  "  plugin for formatting code
 
     " Grepper asynchronously plugin  by Marco Hinz.
     call dein#add('mhinz/vim-grepper')
 
-"    call dein#add('lifepillar/vim-solarized8') 
-    call dein#add('iCyMind/NeoSolarized')
+"    call dein#add('lifepillar/vim-solarized8')
+    call dein#add('iCyMind/NeoSolarized') 	" A fixed solarized colorscheme for better truecolor support.
     call dein#add('autozimu/LanguageClient-neovim', {
         \ 'rev': 'next',
         \ 'build': 'bash install.sh',
         \ })
- 
+
     call dein#end()
     call dein#save_state()
 endif
 
 " == General Configuration ==
 syntax enable       " Turn on syntax highlighting
+
+"   icymind/NeoSolarized
+set termguicolors
+set background=dark  " or "ligth"
+colorscheme NeoSolarized
+
+" colorscheme solarized8
+
 
 " System mappings  ----------------------------------------------------------
 "{{{
@@ -106,7 +115,7 @@ set softtabstop=4           " see multiple spaces as tabstops so <BS> does the r
 set expandtab               " converts tabs to white space
 set shiftwidth=4            " width for autoindents
 " ================= Folding  ===============
-set foldmethod=syntax   "  indent, marker 
+set foldmethod=syntax   "  indent, marker
 autocmd BufRead * normal zR " keep the folds open as you open new files, zM - close all folds
 
 set number                  " Show line numbers
@@ -134,10 +143,6 @@ let g:NERDTreeQuitOnOpen = 1
 
 let g:deoplete#enable_at_startup = 1
 
-" lifepillar/vim-solarized8
-set background=dark
-" colorscheme solarized8
-
 " Linting {{{
 let g:ale_linters = {
     \ 'python': ['pylint'],
@@ -151,14 +156,13 @@ let g:ale_fixers = {
 
 " autocompletion
 let g:ale_completion_enabled = 1
-let g:ale_c_parse_makefile  = 1  "ALE will run `make -n` to automatically determine flags to  set for C or C++ compilers 
+let g:ale_c_parse_makefile  = 1  "ALE will run `make -n` to automatically determine flags to  set for C or C++ compilers
 
 let g:ale_lint_on_text_changed = 'always' " default
 let g:ale_lint_on_save = 1          " default
 let g:ale_lint_on_enter = 1         " default
 let g:ale_lint_on_filetype_changed = 1 " default:w
 let g:ale_sign_column_always = 1
-
 
 "  ############## Neoformat ########## 
 " Not realy working...
