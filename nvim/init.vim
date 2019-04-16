@@ -30,11 +30,14 @@ if dein#load_state('~/.cache/dein')
     
     call dein#add('Yggdroot/indentLine')
     call dein#add('junegunn/vim-easy-align')
-    call dein#add('majutsushi/tagbar')
+    " displays tags in a window, nmap <F8> :TagbarToggle<CR>
+    call dein#add('majutsushi/tagbar')  
+    call dein#add('ludovicchabant/vim-gutentags')  " manages  tag files 
     call dein#add('elzr/vim-json')
     call dein#add('scrooloose/nerdtree')
     call dein#add('tomtom/tcomment_vim')
-    call dein#add('vim-airline/vim-airline')
+    call dein#add('vim-airline/vim-airline') " lean & mean status/tabline
+
 "   Alternatives to ALE
 "    call dein#add('neomake/neomake')
 "    call dein#add('coddingtonbear/neomake-platformio')
@@ -42,6 +45,8 @@ if dein#load_state('~/.cache/dein')
     call dein#add('w0rp/ale')
     call dein#add('tpope/vim-dispatch')
     call dein#add('radenling/vim-dispatch-neovim')
+    
+    call dein#add('sbdchd/neoformat')  "  plugin for formatting code
 
     " Grepper asynchronously plugin  by Marco Hinz.
     call dein#add('mhinz/vim-grepper')
@@ -72,6 +77,8 @@ nnoremap Q <nop>
 vnoremap // y/<C-R>"<CR>
 " recording macros is not my thing
 map q <Nop>
+" portuguese keyboard remap
+" :set langmap=º[,`]
 
 " noremap  <silent> <Home> g<Home>
 " noremap  <silent> <End>  g<End>
@@ -138,18 +145,43 @@ let g:ale_linters = {
     \ 'cpp': ['clang']
  \ }
 let g:ale_fixers = {
-    \   'c': ['clang-format'],
-    \   'cpp': ['clang-format']
+    \   'c': ['clang-format', 'uncrustify'],
+    \   'cpp': ['clang-format', 'uncrustify']
  \}
 
 " autocompletion
 let g:ale_completion_enabled = 1
+let g:ale_c_parse_makefile  = 1  "ALE will run `make -n` to automatically determine flags to  set for C or C++ compilers 
 
 let g:ale_lint_on_text_changed = 'always' " default
 let g:ale_lint_on_save = 1          " default
 let g:ale_lint_on_enter = 1         " default
 let g:ale_lint_on_filetype_changed = 1 " default:w
 let g:ale_sign_column_always = 1
+
+
+"  ############## Neoformat ########## 
+" Not realy working...
+"let g:neoformat_python_autopep8 = {
+"            \ 'exe': ['autopep8'],
+"            \ 'args': ['-s 4', '-E'],
+"            \ 'replace': ['1'] " replace the file, instead of updating buffer (default: 0),
+"            \ 'stdin': [1], " send data to stdin of formatter (default: 0)
+"            \ 'env': ["DEBUG=1"], " prepend environment variables to formatter command
+"            \ 'valid_exit_codes': [0, 23],
+"            \ 'no_append': ['1'],
+"            \ }
+let g:neoformat_python_autopep8 = {
+            \ 'exe': 'autopep8'
+            \ }
+
+let g:neoformat_enabled_python = ['autopep8']
+let g:neoformat_enabled_c = ['uncrustify']
+let g:neoformat_enabled_cpp = ['uncrustify']
+
+" ########## ctags #####
+
+set statusline+=%{gutentags#statusline()}
 
 " ########## C / C++  #############
 
