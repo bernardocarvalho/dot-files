@@ -15,17 +15,16 @@ if dein#load_state('~/.cache/dein')
   " Let dein manage dein
   " Required:
     call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
-    "call dein#add('~/.cache/dein')
- 
-  " Add or remove your plugins here like this:
-  "call dein#add('Shougo/neosnippet.vim')
-  "call dein#add('Shougo/neosnippet-snippets')
 
     call dein#add('Shougo/deoplete.nvim') " dark powered neo-completion
     if !has('nvim')
         call dein#add('roxma/nvim-yarp')
         call dein#add('roxma/vim-hug-neovim-rpc')
     endif
+    call dein#add('Shougo/neosnippet.vim')      " adds snippet support
+    call dein#add('Shougo/neosnippet-snippets') " standard snippets repo for neosnippet
+    " extra snippets can be found at github.com/honza/vim-snippets with some configuration.
+    let g:deoplete#enable_at_startup = 1
 
     call dein#add('junegunn/fzf', { 'build': './install --all', 'merged': 0 })
     call dein#add('junegunn/fzf.vim', { 'depends': 'fzf' })
