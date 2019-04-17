@@ -5,24 +5,26 @@
 3. Tmux
 4. Etc.
 
-************+++
+***
+
++++
 
 ## Neovim
+### Requirements
+- https://github.com/Shougo/dein.vim
 
-```python
-s = "Python syntax highlighting"
-print s
-```
 
 ```bash
  $ cd  ~
- git clone https://github.com/bernardocarvalho/dot-files
- mkdir -p ~/.config
- cd ~/.config
- ln -s ~/dot-files/nvim ./
- nvim
+ $ git clone https://github.com/bernardocarvalho/dot-files
+ $ mkdir -p ~/.config
+ $ cd ~/.config
+ $ ln -s ~/dot-files/nvim ./
+ $ nvim
+ :call dein#install()
 ```
 
-*### References
-[Markdown Cheatsheet]*(https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)*******
+## References
+
+[1]  [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 
