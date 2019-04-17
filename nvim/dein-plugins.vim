@@ -66,7 +66,10 @@ if dein#load_state('~/.cache/dein')
         \ 'build': 'bash install.sh',
         \ })
 
-  " Required:
+    call dein#add('iamcco/markdown-preview.nvim', {'on_ft': ['markdown', 'pandoc.markdown', 'rmd'],
+        \ 'build': 'cd app & yarn install' }) " markdown preview plugin 
+
+    " Required:
     call dein#end()
     call dein#save_state()
 endif
