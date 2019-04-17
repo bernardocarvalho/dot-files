@@ -35,7 +35,7 @@ if dein#load_state('~/.cache/dein')
     call dein#add('easymotion/vim-easymotion')
     call dein#add('tpope/vim-surround')
 
-    call dein#add('Yggdroot/indentLine')
+    call dein#add('Yggdroot/indentLine') " Better Visual Guide
     call dein#add('junegunn/vim-easy-align')
     " displays tags in a window, nmap <F8> :TagbarToggle<CR>
     call dein#add('majutsushi/tagbar')
@@ -45,6 +45,7 @@ if dein#load_state('~/.cache/dein')
 "    call dein#add('tomtom/tcomment_vim')
     call dein#add('scrooloose/nerdcommenter')
     call dein#add('vim-airline/vim-airline') " lean & mean status/tabline
+    call dein#add('vim-airline/vim-airline-themes') " lean & mean status/tabline
 
 "   Alternatives to ALE
 "    call dein#add('neomake/neomake')

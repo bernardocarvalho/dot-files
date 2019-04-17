@@ -84,24 +84,35 @@ let g:deoplete#enable_at_startup = 1
 
 " Linting {{{
 let g:ale_linters = {
-    \ 'python': ['pylint'],
-    \ 'javascript': ['eslint'],
-    \ 'cpp': ['clang']
- \ }
+            \ 'python': ['pylint', 'flake8'],
+            \ 'javascript': ['eslint'],
+            \ 'cpp': ['clang']
+            \ }
 let g:ale_fixers = {
-    \   'c': ['clang-format', 'uncrustify'],
-    \   'cpp': ['clang-format', 'uncrustify']
- \}
+            \   'c': ['clang-format', 'uncrustify'],
+            \   'cpp': ['clang-format', 'uncrustify']
+            \}
 
 " autocompletion
 let g:ale_completion_enabled = 1
 let g:ale_c_parse_makefile  = 1  "ALE will run `make -n` to automatically determine flags to  set for C or C++ compilers
 
-let g:ale_lint_on_text_changed = 'always' " default
+let g:ale_lint_on_text_changed = 'never'   " 'always' " default
 let g:ale_lint_on_save = 1          " default
 let g:ale_lint_on_enter = 1         " default
 let g:ale_lint_on_filetype_changed = 1 " default:w
 let g:ale_sign_column_always = 1
+
+let g:ale_echo_msg_error_str = 'E'
+let g:ale_echo_msg_warning_str = 'W'
+let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+
+" Airline
+let g:airline_left_sep  = ''
+let g:airline_right_sep = ''
+let g:airline#extensions#ale#enabled = 1
+let airline#extensions#ale#error_symbol = 'E:'
+let airline#extensions#ale#warning_symbol = 'W:'
 
 "  ############## Neoformat ##########
 " Not realy working...
@@ -114,13 +125,29 @@ let g:ale_sign_column_always = 1
 "            \ 'valid_exit_codes': [0, 23],
 "            \ 'no_append': ['1'],
 "            \ }
-let g:neoformat_python_autopep8 = {
-            \ 'exe': 'autopep8'
-            \ }
+"            https://yufanlu.net/2018/09/03/neovim-python/
+"let g:neoformat_python_autopep8 = {
+"\ 'exe': 'autopep8',
+"\ 'stdin': 0,
+"\ }
+"\ 'args': ['-s 4', '-E'],
+"\ 'replace': 1,
+"\ 'stdin': 1, NOT Running
+"\ 'env': ["DEBUG=1"],
+"\ 'valid_exit_codes': [0, 23],
+"\ 'no_append': 1,
 
-let g:neoformat_enabled_python = ['autopep8']
+let g:neoformat_run_all_formatters = 1 "by default Neoformat stops after the first succeeds
+let g:neoformat_enabled_python = ['autopep8', 'yapf']
 let g:neoformat_enabled_c = ['uncrustify']
 let g:neoformat_enabled_cpp = ['uncrustify']
+" basic formatting when a filetype is not found. Disabled by default.
+" Enable alignment
+let g:neoformat_basic_format_align = 1
+" Enable tab to spaces conversion
+let g:neoformat_basic_format_retab = 1
+" Enable trimmming of trailing whitespace
+let g:neoformat_basic_format_trim = 1
 
 " ########## ctags #####
 
@@ -136,5 +163,5 @@ source $HOME/.config/nvim/key-mappings.vim
 
 " https://github.com/autozimu/LanguageClient-neovim
 let g:LanguageClient_serverCommands = {
-    \ 'python': ['/usr/local/bin/pyls'],
-    \ }
+            \ 'python': ['/usr/local/bin/pyls'],
+            \ }
