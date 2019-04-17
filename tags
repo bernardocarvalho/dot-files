@@ -1,0 +1,107 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	/90c7aea/
+*.js	nvim/ale-config/projections.json	/^  "*.js": {$/;"	o
+//	init.vim	/^vnoremap \/\/ y\/<C-R>"<CR>$/;"	m
+//	nvim/init.vim	/^vnoremap \/\/ y\/<C-R>"<CR>$/;"	m
+0	nvim/ale-config/projections.json	/^    "linters": ["jshint"]$/;"	s	array:*.js.linters
+<C-n>	init.vim	/^map <C-n> :NERDTreeToggle<CR>$/;"	m
+<C-n>	nvim/init.vim	/^map <C-n> :NERDTreeToggle<CR>$/;"	m
+<C-p>	nvim/init.vim	/^nnoremap <C-p> :<C-u>FZF<CR>$/;"	m
+<End>	init.vim	/^inoremap <silent> <End> <C-o>g<End>$/;"	m
+<End>	init.vim	/^noremap  <silent> <End>  g<End>$/;"	m
+<Home>	init.vim	/^inoremap <silent> <Home> <C-o>g<Home>$/;"	m
+<Home>	init.vim	/^noremap  <silent> <Home> g<Home>$/;"	m
+<Leader>*	nvim/grepper-config/basic.vim	/^nnoremap <Leader>* :Grepper -cword -noprompt<CR>$/;"	m
+<Leader>G	nvim/grepper-config/prompt-mappings.vim	/^nnoremap <Leader>G :Grepper -tool rg<CR>$/;"	m
+<Leader>g	nvim/grepper-config/prompt-mappings.vim	/^nnoremap <Leader>g :Grepper -tool git<CR>$/;"	m
+<Leader>l	nvim/ale-config/manual.vim	/^nnoremap <Leader>l :ALELint<CR>$/;"	m
+<leader>gb	nvim/key-mappings.vim	/^    nnoremap <silent> <leader>gb :Gblame<CR>$/;"	m
+<leader>gc	nvim/key-mappings.vim	/^    nnoremap <silent> <leader>gc :Gcommit<CR>$/;"	m
+<leader>gd	nvim/key-mappings.vim	/^    nnoremap <silent> <leader>gd :Gdiff<CR>$/;"	m
+<leader>ge	nvim/key-mappings.vim	/^    nnoremap <silent> <leader>ge :Gedit<CR>$/;"	m
+<leader>gi	nvim/key-mappings.vim	/^    nnoremap <silent> <leader>gi :Git add -p %<CR>$/;"	m
+<leader>gl	nvim/key-mappings.vim	/^    nnoremap <silent> <leader>gl :Glog<CR>$/;"	m
+<leader>gp	nvim/key-mappings.vim	/^    nnoremap <silent> <leader>gp :Git push<CR>$/;"	m
+<leader>gr	nvim/key-mappings.vim	/^    nnoremap <silent> <leader>gr :Gread<CR>$/;"	m
+<leader>gs	nvim/key-mappings.vim	/^    nnoremap <silent> <leader>gs :Gstatus<CR>$/;"	m
+<leader>gw	nvim/key-mappings.vim	/^    nnoremap <silent> <leader>gw :Gwrite<CR>$/;"	m
+=oa	nvim/ale-config/toggle.vim	/^nnoremap =oa :ALEToggle<CR>$/;"	m
+Neovim	README.md	/^## Neovim$/;"	s
+Q	init.vim	/^nnoremap Q <nop>$/;"	m
+Q	nvim/init.vim	/^nnoremap Q <nop>$/;"	m
+References	README.md	/^## References$/;"	s
+Requirements	README.md	/^### Requirements$/;"	S
+SetupCommandAlias	nvim/grepper-config/alias.vim	/^function! SetupCommandAlias(input, output)$/;"	f
+[W	nvim/ale-config/basics.vim	/^nmap <silent> [W <Plug>(ale_first)$/;"	m
+[W	nvim/ale-config/traversal.vim	/^nmap <silent> [W <Plug>(ale_first)$/;"	m
+[oa	nvim/ale-config/toggle.vim	/^nnoremap [oa :ALEEnable<CR>$/;"	m
+[w	nvim/ale-config/basics.vim	/^nmap <silent> [w <Plug>(ale_previous)$/;"	m
+[w	nvim/ale-config/traversal.vim	/^nmap <silent> [w <Plug>(ale_previous)$/;"	m
+]W	nvim/ale-config/basics.vim	/^nmap <silent> ]W <Plug>(ale_last)$/;"	m
+]W	nvim/ale-config/traversal.vim	/^nmap <silent> ]W <Plug>(ale_last)$/;"	m
+]oa	nvim/ale-config/toggle.vim	/^nnoremap ]oa :ALEDisable<CR>$/;"	m
+]w	nvim/ale-config/basics.vim	/^nmap <silent> ]w <Plug>(ale_next)$/;"	m
+]w	nvim/ale-config/traversal.vim	/^nmap <silent> ]w <Plug>(ale_next)$/;"	m
+configure_projects	nvim/ale-config/project-config.vim	/^augroup configure_projects$/;"	a
+g:LanguageClient_serverCommands	nvim/init.vim	/^let g:LanguageClient_serverCommands = {$/;"	v
+g:NERDTreeQuitOnOpen	nvim/init.vim	/^let g:NERDTreeQuitOnOpen = 1$/;"	v
+g:ale_c_parse_makefile	nvim/init.vim	/^let g:ale_c_parse_makefile  = 1  "ALE will run `make -n` to automatically determine flags to  se/;"	v
+g:ale_completion_enabled	nvim/init.vim	/^let g:ale_completion_enabled = 1$/;"	v
+g:ale_fixers	nvim/init.vim	/^let g:ale_fixers = {$/;"	v
+g:ale_lint_on_enter	nvim/ale-config/automatic.vim	/^let g:ale_lint_on_enter = 1               " default$/;"	v
+g:ale_lint_on_enter	nvim/ale-config/manual.vim	/^let g:ale_lint_on_enter = 0$/;"	v
+g:ale_lint_on_enter	nvim/ale-config/semi-automatic.vim	/^let g:ale_lint_on_enter = 0$/;"	v
+g:ale_lint_on_enter	nvim/init.vim	/^let g:ale_lint_on_enter = 1         " default$/;"	v
+g:ale_lint_on_filetype_changed	nvim/ale-config/automatic.vim	/^let g:ale_lint_on_filetype_changed = 1    " default$/;"	v
+g:ale_lint_on_filetype_changed	nvim/ale-config/manual.vim	/^let g:ale_lint_on_filetype_changed = 0$/;"	v
+g:ale_lint_on_filetype_changed	nvim/ale-config/semi-automatic.vim	/^let g:ale_lint_on_filetype_changed = 0$/;"	v
+g:ale_lint_on_filetype_changed	nvim/init.vim	/^let g:ale_lint_on_filetype_changed = 1 " default:w$/;"	v
+g:ale_lint_on_save	nvim/ale-config/automatic.vim	/^let g:ale_lint_on_save = 1                " default$/;"	v
+g:ale_lint_on_save	nvim/ale-config/manual.vim	/^let g:ale_lint_on_save = 0$/;"	v
+g:ale_lint_on_save	nvim/ale-config/semi-automatic.vim	/^let g:ale_lint_on_save = 1                " default$/;"	v
+g:ale_lint_on_save	nvim/init.vim	/^let g:ale_lint_on_save = 1          " default$/;"	v
+g:ale_lint_on_text_changed	nvim/ale-config/automatic.vim	/^let g:ale_lint_on_text_changed = 'always' " default$/;"	v
+g:ale_lint_on_text_changed	nvim/ale-config/manual.vim	/^let g:ale_lint_on_text_changed = 'never'$/;"	v
+g:ale_lint_on_text_changed	nvim/ale-config/semi-automatic.vim	/^let g:ale_lint_on_text_changed = 'never'$/;"	v
+g:ale_lint_on_text_changed	nvim/init.vim	/^let g:ale_lint_on_text_changed = 'always' " default$/;"	v
+g:ale_linters	nvim/ale-config/basics.vim	/^let g:ale_linters = {$/;"	v
+g:ale_linters	nvim/ale-config/linters.vim	/^let g:ale_linters = {$/;"	v
+g:ale_linters	nvim/init.vim	/^let g:ale_linters = {$/;"	v
+g:ale_sign_column_always	nvim/ale-config/automatic.vim	/^let g:ale_sign_column_always = 1$/;"	v
+g:ale_sign_column_always	nvim/init.vim	/^let g:ale_sign_column_always = 1$/;"	v
+g:deoplete#enable_at_startup	init.vim	/^let g:deoplete#enable_at_startup = 1$/;"	v
+g:deoplete#enable_at_startup	nvim/dein-plugins.vim	/^    let g:deoplete#enable_at_startup = 1$/;"	v
+g:deoplete#enable_at_startup	nvim/init.vim	/^let g:deoplete#enable_at_startup = 1$/;"	v
+g:gitgutter_max_signs	nvim/init.vim	/^let g:gitgutter_max_signs = 500  " default value$/;"	v
+g:gitgutter_override_sign_column_highlight	nvim/init.vim	/^let g:gitgutter_override_sign_column_highlight = 0$/;"	v
+g:grepper	nvim/grepper-config/basic.vim	/^let g:grepper       = {}$/;"	v
+g:grepper	nvim/grepper-config/basic.vim	/^let g:grepper.tools = ['grep', 'git', 'rg']$/;"	v
+g:neoformat_enabled_c	nvim/init.vim	/^let g:neoformat_enabled_c = ['uncrustify']$/;"	v
+g:neoformat_enabled_cpp	nvim/init.vim	/^let g:neoformat_enabled_cpp = ['uncrustify']$/;"	v
+g:neoformat_enabled_python	nvim/init.vim	/^let g:neoformat_enabled_python = ['autopep8']$/;"	v
+g:neoformat_python_autopep8	nvim/init.vim	/^let g:neoformat_python_autopep8 = {$/;"	v
+g:python3_host_prog	nvim/init.vim	/^let g:python3_host_prog = '\/usr\/local\/bin\/python3.7'$/;"	v
+g:python_host_prog	nvim/init.vim	/^let g:python_host_prog = '\/usr\/bin\/python2'$/;"	v
+g:syntastic_always_populate_loc_list	init.vim	/^let g:syntastic_always_populate_loc_list = 1$/;"	v
+g:syntastic_auto_loc_list	init.vim	/^let g:syntastic_auto_loc_list = 1$/;"	v
+g:syntastic_c_checkers	init.vim	/^let g:syntastic_c_checkers = ['gcc']    " Use gcc as default syntax checker$/;"	v
+g:syntastic_c_include_dirs	init.vim	/^let g:syntastic_c_include_dirs = [".", "\/home\/bernardo\/FPGA\/BUILDROOT\/buildroot\/output\/bu/;"	v
+g:syntastic_check_on_open	init.vim	/^let g:syntastic_check_on_open = 1$/;"	v
+g:syntastic_check_on_wq	init.vim	/^let g:syntastic_check_on_wq = 0$/;"	v
+g:syntastic_enable_balloons	init.vim	/^let g:syntastic_enable_balloons = 1$/;"	v
+gs	nvim/grepper-config/basic.vim	/^nmap gs <plug>(GrepperOperator)$/;"	m
+gs	nvim/grepper-config/basic.vim	/^xmap gs <plug>(GrepperOperator)$/;"	m
+linters	nvim/ale-config/projections.json	/^    "linters": ["jshint"]$/;"	a	object:*.js
+mapleader	init.vim	/^let mapleader = ','$/;"	v
+mapleader	nvim/init.vim	/^let mapleader = ','$/;"	v
+my dot-files  for Linux, Mac	README.md	/^# my dot-files  for Linux, Mac $/;"	c
+q	init.vim	/^map q <Nop>$/;"	m
+q	nvim/init.vim	/^map q <Nop>$/;"	m
+s:linters	nvim/ale-config/project-config.vim	/^function! s:linters() abort$/;"	f
+set t_8b	tmux.conf	/^set t_8b=^[[48;2;%lu;%lu;%lum$/;"	k
+set t_8f	tmux.conf	/^set t_8f=^[[38;2;%lu;%lu;%lum$/;"	k
