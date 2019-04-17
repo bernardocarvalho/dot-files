@@ -1,4 +1,4 @@
-# my dot-files  for Linux, Mac 
+# my dot-files  for Linux, Mac
 
 1. Vim
 2. Neovim
