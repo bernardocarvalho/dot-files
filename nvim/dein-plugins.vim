@@ -62,7 +62,8 @@ if dein#load_state('~/.cache/dein')
 
 "    call dein#add('lifepillar/vim-solarized8')
     call dein#add('iCyMind/NeoSolarized') 	" A fixed solarized colorscheme for better truecolor support.
-    call dein#add('autozimu/LanguageClient-neovim', {
+"   Language Server Protocol
+    call dein#add('autozimu/LanguageClient-neovim', { 
         \ 'rev': 'next',
         \ 'build': 'bash install.sh',
         \ })

@@ -2,6 +2,12 @@
 " Link: https://github.com/vonbrownie/dotfiles
 " https://github.com/mhartington/dotfiles/blob/master/config/nvim/init.vim
 "
+" let g:python3_host_prog = '/usr/local/bin/python3.7'
+" let g:python_host_prog = '/usr/bin/python2'
+" Using Pyenv on MAC
+let g:python3_host_prog = '~/.pyenv/shims/python3'
+let g:python_host_prog = '/usr/local/bin/python2'
+
 source $HOME/.config/nvim/dein-plugins.vim
 
 " == General Configuration ==
@@ -63,9 +69,6 @@ autocmd BufRead * normal zR " keep the folds open as you open new files, zM - cl
 set number                  " Show line numbers
 set wildmode=longest,list   " get bash-like tab completions
 set cc=80                   " set an 80 column border for good coding style
-
-let g:python3_host_prog = '/usr/local/bin/python3.7'
-let g:python_host_prog = '/usr/bin/python2'
 
 "}}}"
 
@@ -138,7 +141,7 @@ let airline#extensions#ale#warning_symbol = 'W:'
 "\ 'no_append': 1,
 
 let g:neoformat_run_all_formatters = 1 "by default Neoformat stops after the first succeeds
-let g:neoformat_enabled_python = ['autopep8', 'yapf']
+let g:neoformat_enabled_python = ['yapf', 'autopep8']
 let g:neoformat_enabled_c = ['uncrustify']
 let g:neoformat_enabled_cpp = ['uncrustify']
 " basic formatting when a filetype is not found. Disabled by default.
@@ -161,7 +164,9 @@ set statusline+=%{gutentags#statusline()}
 source $HOME/.config/nvim/grepper-config/basic.vim
 source $HOME/.config/nvim/key-mappings.vim
 
+" https://fortes.com/2017/language-server-neovim/
 " https://github.com/autozimu/LanguageClient-neovim
+" https://github.com/palantir/python-language-server
 let g:LanguageClient_serverCommands = {
             \ 'python': ['/usr/local/bin/pyls'],
             \ }
