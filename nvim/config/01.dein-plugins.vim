@@ -21,8 +21,7 @@ if dein#load_state('~/.cache/dein')
     call dein#add('Shougo/neosnippet.vim')      " adds snippet support
     call dein#add('Shougo/neosnippet-snippets') " standard snippets repo for neosnippet
     " extra snippets can be found at github.com/honza/vim-snippets with some configuration.
-    call dein#add('deoplete-plugins/deoplete-jedi') " deoplete.nvim source for Python 
-    let g:deoplete#enable_at_startup = 1
+ "   call dein#add('deoplete-plugins/deoplete-jedi') " deoplete.nvim source for Python 
 
     call dein#add('junegunn/fzf', { 'build': './install --all', 'merged': 0 })
     call dein#add('junegunn/fzf.vim', { 'depends': 'fzf' })
@@ -78,3 +77,10 @@ endif
 filetype indent on    " Use filetype indentation
 filetype plugin indent on " Allow plugins to use filetype indentation
 
+" If you want to install not installed plugins on startup.
+if dein#check_install()
+    call dein#install()
+endif
+
+"End dein Scripts-------------------------
+"

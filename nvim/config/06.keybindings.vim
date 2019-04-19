@@ -29,3 +29,24 @@ xmap gs <plug>(GrepperOperator)
 
 "   ,,            <Plug>(easymotion-prefix)
 "   ,sv         * :source ~/.vimrc<CR>
+
+" deoplete tab-complete
+inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+
+" keybindings for language client
+nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
+nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
+nnoremap <silent> gr :call LanguageClient_textDocument_references()<CR>
+nnoremap <silent> gs :call LanguageClient_textDocument_documentSymbol()<CR>
+nnoremap <silent> <F2> :call LanguageClient_textDocument_rename()<CR>
+nnoremap <silent> gf :call LanguageClient_textDocument_codeAction()<CR>
+
+" change working directory to where the file in the buffer is located
+" if user types `,cd`
+nnoremap ,cd :cd %:p:h<CR>:pwd<CR>
+
+" <ESC> exits in terminal mode
+tnoremap <ESC> <C-\><C-n><C-w><C-p>
+
+" Easy most-recent-buffer switching
+nnoremap <Tab> :buffers<CR>:buffer<Space>
