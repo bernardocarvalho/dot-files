@@ -15,11 +15,11 @@ let g:deoplete#enable_smart_case = 1
 " candidate_marks
 call deoplete#custom#option('candidate_marks',
             \ ['A', 'S', 'D', 'F', 'G'])
-inoremap <expr>A       deoplete#insert_candidate(0)
-inoremap <expr>S       deoplete#insert_candidate(1)
-inoremap <expr>D       deoplete#insert_candidate(2)
-inoremap <expr>F       deoplete#insert_candidate(3)
-inoremap <expr>G       deoplete#insert_candidate(4)
+"inoremap <expr>A       deoplete#insert_candidate(0)
+"inoremap <expr>S       deoplete#insert_candidate(1)
+"inoremap <expr>D       deoplete#insert_candidate(2)
+"inoremap <expr>F       deoplete#insert_candidate(3)
+"inoremap <expr>G       deoplete#insert_candidate(4)
 
 " Default
 " call deoplete#custom#source('LanguageClient',
