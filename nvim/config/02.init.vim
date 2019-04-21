@@ -124,13 +124,14 @@ map <C-n> :NERDTreeToggle<CR>
 "let g:deoplete#enable_at_startup = 1
 
 " Linting {{{
+" Defined in ftplugin files Check ALEInfo...
 let g:ale_linters = {
             \ 'python': ['pylint', 'flake8'],
             \ 'javascript': ['eslint'],
-            \ 'cpp': ['clang']
+            \ 'cpp': ['clang'],
             \ }
+
 let g:ale_fixers = {
-            \   'c': ['clang-format', 'uncrustify'],
             \   'cpp': ['clang-format', 'uncrustify'],
             \   'python': ['yapf','remove_trailing_lines','isort'],
             \   '*': ['remove_trailing_lines', 'trim_whitespace']
@@ -141,10 +142,12 @@ let g:ale_fixers = {
 let g:ale_completion_enabled = 0
 let g:ale_c_parse_makefile  = 1  "ALE will run `make -n` to automatically determine flags to  set for C or C++ compilers
 
+let g:ale_fix_on_save = 1
+
 let g:ale_lint_on_text_changed = 'never'   " 'always' " default
 let g:ale_lint_on_save = 1          " default
 let g:ale_lint_on_enter = 1         " default
-let g:ale_lint_on_filetype_changed = 1 " default:w
+let g:ale_lint_on_filetype_changed = 1 " default
 let g:ale_sign_column_always = 1
 
 let g:ale_echo_msg_error_str = 'E'

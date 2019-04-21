@@ -13,6 +13,10 @@ xmap º [
 xmap ´ ]
 
 "}
+" Jump between #git hunks in Vim with vim-gitgutter
+" Normally  use ]c and [c 
+nnoremap <silent> <cr> :GitGutterNextHunk<cr>
+nnoremap <silent> <backspace> :GitGutterPrevHunk<cr>
 
 " Help mappings
 "  Ctrl-] to follow the link 
