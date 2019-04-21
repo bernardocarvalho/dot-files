@@ -21,7 +21,7 @@ if dein#load_state('~/.cache/dein')
     call dein#add('Shougo/neosnippet.vim')      " adds snippet support
     call dein#add('Shougo/neosnippet-snippets') " standard snippets repo for neosnippet
     " extra snippets can be found at github.com/honza/vim-snippets with some configuration.
- "   call dein#add('deoplete-plugins/deoplete-jedi') " deoplete.nvim source for Python 
+ "   call dein#add('deoplete-plugins/deoplete-jedi') " deoplete.nvim source for Python
 
     call dein#add('junegunn/fzf', { 'build': './install --all', 'merged': 0 })
     call dein#add('junegunn/fzf.vim', { 'depends': 'fzf' })
@@ -36,6 +36,7 @@ if dein#load_state('~/.cache/dein')
     call dein#add('junegunn/vim-easy-align')
     " displays tags in a window, nmap <F8> :TagbarToggle<CR>
     call dein#add('majutsushi/tagbar')
+" Gutentags needs universal-ctags !
     call dein#add('ludovicchabant/vim-gutentags')  " manages  tag files
     call dein#add('elzr/vim-json')
     call dein#add('scrooloose/nerdtree')
@@ -60,13 +61,13 @@ if dein#load_state('~/.cache/dein')
 "    call dein#add('lifepillar/vim-solarized8')
     call dein#add('iCyMind/NeoSolarized') 	" A fixed solarized colorscheme for better truecolor support.
 "   Language Server Protocol
-    call dein#add('autozimu/LanguageClient-neovim', { 
+    call dein#add('autozimu/LanguageClient-neovim', {
         \ 'rev': 'next',
         \ 'build': 'bash install.sh',
         \ })
 
     call dein#add('iamcco/markdown-preview.nvim', {'on_ft': ['markdown', 'pandoc.markdown', 'rmd'],
-        \ 'build': 'cd app & yarn install' }) " markdown preview plugin 
+        \ 'build': 'cd app & yarn install' }) " markdown preview plugin
 
     " Required:
     call dein#end()

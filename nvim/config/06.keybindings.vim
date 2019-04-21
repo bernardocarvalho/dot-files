@@ -1,20 +1,19 @@
-" mostly taken from http://spf13.com
-"
-" Fugitive {
-    nnoremap <silent> <leader>gs :Gstatus<CR>
-    nnoremap <silent> <leader>gd :Gdiff<CR>
-    nnoremap <silent> <leader>gc :Gcommit<CR>
-    nnoremap <silent> <leader>gb :Gblame<CR>
-    nnoremap <silent> <leader>gl :Glog<CR>
-    nnoremap <silent> <leader>gp :Git push<CR>
-    nnoremap <silent> <leader>gr :Gread<CR>
-    nnoremap <silent> <leader>gw :Gwrite<CR>
-    nnoremap <silent> <leader>ge :Gedit<CR>
-    " Mnemonic _i_nteractive
-    nnoremap <silent> <leader>gi :Git add -p %<CR>
-""        nnoremap <silent> <leader>gg :SignifyToggle<CR>
+" Fuzzy Find in normal mode
+nnoremap <C-p> :<C-u>FZF<CR>
+
+"easiest solution is to map to [ and ] directly:
+" portuguese keyboard remap
+" :set langmap=º[,`]
+
+nmap º [
+nmap ´ ]
+omap º [
+omap ´ ]
+xmap º [
+xmap ´ ]
+
 "}
-"
+
 " Grepper {
 "nnoremap <leader>g :Grepper -tool git<cr>
 nnoremap <leader>g :Grepper -tool grep<cr>
@@ -27,7 +26,7 @@ xmap gs <plug>(GrepperOperator)
 
 "}
 
-"   ,,            <Plug>(easymotion-prefix)
+"Easymotion <Leader><Leader>w o <Leader><Leader>f<char>
 "   ,sv         * :source ~/.vimrc<CR>
 
 " deoplete tab-complete

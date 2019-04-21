@@ -31,13 +31,14 @@ endif
 
 
 " Using Pyenv on MAC
-if OSX()
-	let g:python3_host_prog = '~/.pyenv/shims/python3'
-	let g:python_host_prog = '/usr/local/bin/python2'
-else
-	let g:python3_host_prog = '/usr/local/bin/python3.7'
-	let g:python_host_prog = '/usr/bin/python2'
-endif
+"if OSX()
+    ""let g:python3_host_prog = '~/.pyenv/shims/python3'
+    "let g:python_host_prog = '~/.pyenv/shims/python2.7'
+    ""let g:python_host_prog = '/usr/local/bin/python2'
+""else
+	""let g:python3_host_prog = '/usr/local/bin/python3.7'
+	""let g:python_host_prog = '/usr/bin/python2'
+"endif
 
 " == General Configuration ==
 syntax enable       " Turn on syntax highlighting
@@ -55,16 +56,11 @@ let g:gitgutter_max_signs = 500  " default value
 "{{{
 " leader is ,
 let mapleader = ','
-" Fuzzy Find in normal mode
-nnoremap <C-p> :<C-u>FZF<CR>
-
 " No need for ex mode
 nnoremap Q <nop>
 vnoremap // y/<C-R>"<CR>
 " recording macros is not my thing
 map q <Nop>
-" portuguese keyboard remap
-" :set langmap=º[,`]
 
 " noremap  <silent> <Home> g<Home>
 " noremap  <silent> <End>  g<End>
