@@ -14,6 +14,12 @@ xmap ´ ]
 
 "}
 
+" Help mappings
+"  Ctrl-] to follow the link 
+"  Ctrl-T to go back to the previous topic
+"  https://vim.fandom.com/wiki/Learn_to_use_help
+"  more in ftplugin/help.vim
+"
 " Grepper {
 "nnoremap <leader>g :Grepper -tool git<cr>
 nnoremap <leader>g :Grepper -tool grep<cr>
@@ -32,13 +38,19 @@ xmap gs <plug>(GrepperOperator)
 " deoplete tab-complete
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 
-" keybindings for language client
-nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
-nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
-nnoremap <silent> gr :call LanguageClient_textDocument_references()<CR>
-nnoremap <silent> gs :call LanguageClient_textDocument_documentSymbol()<CR>
-nnoremap <silent> <F2> :call LanguageClient_textDocument_rename()<CR>
-nnoremap <silent> gf :call LanguageClient_textDocument_codeAction()<CR>
+" keybindings for LanguageClient-neovim 
+ nnoremap <F5> :call LanguageClient_contextMenu()<CR>
+" Or map each action separately
+ nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
+ nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
+ nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
+
+"nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
+"nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
+"nnoremap <silent> gr :call LanguageClient_textDocument_references()<CR>
+"nnoremap <silent> gs :call LanguageClient_textDocument_documentSymbol()<CR>
+"nnoremap <silent> <F2> :call LanguageClient_textDocument_rename()<CR>
+"nnoremap <silent> gf :call LanguageClient_textDocument_codeAction()<CR>
 
 " change working directory to where the file in the buffer is located
 " if user types `,cd`

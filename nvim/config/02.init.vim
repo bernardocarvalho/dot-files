@@ -62,10 +62,15 @@ vnoremap // y/<C-R>"<CR>
 " recording macros is not my thing
 map q <Nop>
 
+" VIM Cheatsheet https://gist.github.com/0xadada/1ea7f96d108dcfbe75c9
+"
 " noremap  <silent> <Home> g<Home>
 " noremap  <silent> <End>  g<End>
 " inoremap <silent> <Home> <C-o>g<Home>
 " inoremap <silent> <End> <C-o>g<End>
+
+" opening a new file when the current buffer has unsaved changes causes files to be hidden 
+set hidden
 
 set showmatch               " Show matching brackets.
 " ================ Searching ========================
