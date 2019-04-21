@@ -36,7 +36,7 @@ if dein#load_state('~/.cache/dein')
     call dein#add('tpope/vim-fugitive', {'on_cmd' : 'Gstatus'})
     call dein#add('airblade/vim-gitgutter') " shows a git diff in the gutter (sign column)
     call dein#add('easymotion/vim-easymotion')
-    call dein#add('tpope/vim-surround')
+    call dein#add('tpope/vim-surround')" quoting/parenthesizing made simple
 
 " display     
     call dein#add('Yggdroot/indentLine') " Better Visual Guide
