@@ -29,36 +29,11 @@ if dein#load_state('~/.cache/dein')
         \ 'rev': 'next',
         \ 'build': 'bash install.sh',
         \ })
-
-
-    call dein#add('junegunn/fzf', { 'build': './install --all', 'merged': 0 })
-    call dein#add('junegunn/fzf.vim', { 'depends': 'fzf' })
-
-    call dein#add('tpope/vim-unimpaired')
-   
-    call dein#add('tpope/vim-fugitive', {'on_cmd' : 'Gstatus'})
-    call dein#add('airblade/vim-gitgutter') " shows a git diff in the gutter (sign column)
-   
-    call dein#add('easymotion/vim-easymotion')
-    call dein#add('tpope/vim-surround')
-
-    " display
-    call dein#add('Yggdroot/indentLine') " Better Visual Guide
-    call dein#add('junegunn/vim-easy-align')
-    " displays tags in a window, nmap <F8> :TagbarToggle<CR>
-    call dein#add('majutsushi/tagbar')
     call dein#add('sheerun/vim-polyglot') " A solid language pack for Vim
-    call dein#add('vim-airline/vim-airline') " lean & mean status/tabline
-    call dein#add('vim-airline/vim-airline-themes') " lean & mean status/tabline
-"    call dein#add('lifepillar/vim-solarized8')
-    call dein#add('iCyMind/NeoSolarized') 	" A fixed solarized colorscheme for better truecolor support.
-
-    call dein#add('ludovicchabant/vim-gutentags')  " manages  tag files
-    call dein#add('elzr/vim-json')
-    call dein#add('scrooloose/nerdtree')
 "    call dein#add('tomtom/tcomment_vim')
     call dein#add('scrooloose/nerdcommenter')
-
+    call dein#add('ludovicchabant/vim-gutentags')  " manages  tag files
+    call dein#add('elzr/vim-json')
 " Code standards
 "    Alternatives to ALE
 "    call dein#add('neomake/neomake')
@@ -70,11 +45,35 @@ if dein#load_state('~/.cache/dein')
 " add isort ?
     call dein#add('sbdchd/neoformat')  "  plugin for formatting code
 
-    " Grepper asynchronously plugin  by Marco Hinz.
-    call dein#add('mhinz/vim-grepper')
-
     call dein#add('iamcco/markdown-preview.nvim', {'on_ft': ['markdown', 'pandoc.markdown', 'rmd'],
         \ 'build': 'cd app & yarn install' }) " markdown preview plugin 
+
+    call dein#add('tpope/vim-unimpaired')
+  
+    " Git 
+    call dein#add('tpope/vim-fugitive', {'on_cmd' : 'Gstatus'})
+    call dein#add('airblade/vim-gitgutter') " shows a git diff in the gutter (sign column)
+   
+    call dein#add('tpope/vim-surround')
+
+    " Display & Motion
+    call dein#add('Yggdroot/indentLine') " Better Visual Guide
+    call dein#add('junegunn/vim-easy-align')
+    " displays tags in a window, nmap <F8> :TagbarToggle<CR>
+    call dein#add('majutsushi/tagbar')
+    call dein#add('vim-airline/vim-airline') " lean & mean status/tabline
+    call dein#add('vim-airline/vim-airline-themes') " lean & mean status/tabline
+"    call dein#add('lifepillar/vim-solarized8')
+    call dein#add('iCyMind/NeoSolarized') 	" A fixed solarized colorscheme for better truecolor support.
+    call dein#add('easymotion/vim-easymotion')
+    call dein#add('christoomey/vim-tmux-navigator')
+
+" File Managing and Finding
+    call dein#add('scrooloose/nerdtree')
+    call dein#add('junegunn/fzf', { 'build': './install --all', 'merged': 0 })
+    call dein#add('junegunn/fzf.vim', { 'depends': 'fzf' })
+    " Grepper asynchronously plugin  by Marco Hinz.
+    call dein#add('mhinz/vim-grepper')
 
     " Required:
     call dein#end()

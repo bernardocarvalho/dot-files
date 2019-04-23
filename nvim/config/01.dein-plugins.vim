@@ -35,10 +35,10 @@ if dein#load_state('~/.cache/dein')
     call dein#add('tpope/vim-unimpaired')
     call dein#add('tpope/vim-fugitive', {'on_cmd' : 'Gstatus'})
     call dein#add('airblade/vim-gitgutter') " shows a git diff in the gutter (sign column)
-    call dein#add('easymotion/vim-easymotion')
     call dein#add('tpope/vim-surround')" quoting/parenthesizing made simple
 
-" display     
+" Display & Movement
+    call dein#add('easymotion/vim-easymotion')
     call dein#add('Yggdroot/indentLine') " Better Visual Guide
     call dein#add('junegunn/vim-easy-align')
     " displays tags in a window, nmap <F8> :TagbarToggle<CR>
@@ -50,18 +50,19 @@ if dein#load_state('~/.cache/dein')
     call dein#add('iCyMind/NeoSolarized') 	" A fixed solarized colorscheme for better truecolor support.
     call dein#add('iamcco/markdown-preview.nvim', {'on_ft': ['markdown', 'pandoc.markdown', 'rmd'],
         \ 'build': 'cd app & yarn install' }) " markdown preview plugin
+    call dein#add('christoomey/vim-tmux-navigator')
 
     " Gutentags needs universal-ctags !
     call dein#add('ludovicchabant/vim-gutentags')  " manages  tag files
     call dein#add('elzr/vim-json')
 
-" file Manager     
+" File Manager
     call dein#add('scrooloose/nerdtree')
 
     "    call dein#add('tomtom/tcomment_vim')
     call dein#add('scrooloose/nerdcommenter')
 
-" Code standarts 
+" Code standarts
 "   Alternatives to ALE
 "    call dein#add('neomake/neomake')
 "    call dein#add('coddingtonbear/neomake-platformio')
