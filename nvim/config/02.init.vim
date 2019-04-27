@@ -69,7 +69,7 @@ map q <Nop>
 " inoremap <silent> <Home> <C-o>g<Home>
 " inoremap <silent> <End> <C-o>g<End>
 
-" opening a new file when the current buffer has unsaved changes causes files to be hidden 
+" opening a new file when the current buffer has unsaved changes causes files to be hidden
 set hidden
 
 set showmatch               " Show matching brackets.
@@ -209,10 +209,10 @@ let g:neoformat_basic_format_trim = 1
 " Optional. The default behaviour should work for most users.
 let g:grepper               = {}
 let g:grepper.tools         = ['git', 'ag', 'grep']
-let g:grepper.jump          = 1
+let g:grepper.jump          = 0
 let g:grepper.next_tool     = '<leader>g'
 let g:grepper.simple_prompt = 1
-let g:grepper.quickfix      = 0
+let g:grepper.quickfix      = 1
 
 " close vim if only window left is nerdtree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif

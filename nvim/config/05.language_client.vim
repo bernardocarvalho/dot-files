@@ -3,7 +3,7 @@
 
 " language server commands
 let g:LanguageClient_serverCommands = {
-            \ 'cpp': ['ccls'],
+            \ 'cpp': ['ccls', '--log-file=/tmp/cc.log'],
             \ 'c': ['ccls', '--log-file=/tmp/cc.log'],
             \ 'python': ['$HOME/.pyenv/shims/pyls'],
             \ }
