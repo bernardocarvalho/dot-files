@@ -19,6 +19,7 @@ if dein#load_state('~/.cache/dein')
         call dein#add('roxma/nvim-yarp')
         call dein#add('roxma/vim-hug-neovim-rpc')
     endif
+    call dein#add('Shougo/deoplete-clangx') " C/C++ Completion for deoplete using clang
     call dein#add('Shougo/neosnippet.vim')      " adds snippet support
     call dein#add('Shougo/neosnippet-snippets') " standard snippets repo for neosnippet
     " extra snippets can be found at github.com/honza/vim-snippets with some configuration.
