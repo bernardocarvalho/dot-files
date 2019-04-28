@@ -13,6 +13,9 @@ if dein#load_state('~/.cache/dein')
   " Required:
     call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
 
+    call dein#add('haya14busa/dein-command.vim')
+    call dein#add('wsdjeg/dein-ui.vim')
+
 " Code Completion
     call dein#add('Shougo/deoplete.nvim') " dark powered neo-completion
     if !has('nvim')
@@ -33,7 +36,7 @@ if dein#load_state('~/.cache/dein')
     call dein#add('junegunn/fzf', { 'build': './install --all', 'merged': 0 })
     call dein#add('junegunn/fzf.vim', { 'depends': 'fzf' })
 
-    call dein#add('tpope/vim-unimpaired')
+    "call dein#add('tpope/vim-unimpaired')
     call dein#add('tpope/vim-fugitive', {'on_cmd' : 'Gstatus'})
     call dein#add('airblade/vim-gitgutter') " shows a git diff in the gutter (sign column)
     call dein#add('tpope/vim-surround')" quoting/parenthesizing made simple
@@ -73,10 +76,12 @@ if dein#load_state('~/.cache/dein')
     call dein#add('tpope/vim-dispatch')
     call dein#add('radenling/vim-dispatch-neovim')
 
+ " Format the entire buffer, or visual selection of the buffer
+" :Neoformat
     call dein#add('sbdchd/neoformat')  "  plugin for formatting code
 
     " Grepper asynchronously plugin  by Marco Hinz.
-    call dein#add('mhinz/vim-grepper')
+    "call dein#add('mhinz/vim-grepper')
 
 
     " Required:
@@ -92,6 +97,6 @@ filetype plugin indent on " Allow plugins to use filetype indentation
 if dein#check_install()
     call dein#install()
 endif
-
+" if needed run  :call dein#recache_runtimepath()
 "End dein Scripts-------------------------
 "
