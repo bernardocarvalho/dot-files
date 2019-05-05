@@ -96,6 +96,7 @@ filetype indent plugin on
 
 " ================= Folding  ===============
 set foldmethod=syntax   "  indent, marker
+"https://github.com/tmhedberg/SimpylFold
 autocmd BufRead * normal zR " keep the folds open as you open new files, zM - close all folds
 
 " relative line numbers
