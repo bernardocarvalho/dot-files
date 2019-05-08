@@ -217,6 +217,9 @@ let g:grepper.quickfix      = 1
 " close vim if only window left is nerdtree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
+" Set Filetype
+au BufRead,BufNewFile *.vh		set filetype=verilog
+
 " https://fortes.com/2017/language-server-neovim/
 " https://github.com/autozimu/LanguageClient-neovim
 " https://github.com/palantir/python-language-server
