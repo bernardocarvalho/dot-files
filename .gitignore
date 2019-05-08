@@ -1,0 +1,6 @@
+#ignore hiden files
+.*
+!/.gitignore
+# Auto-generated tag files
+tags
+Waldo
