@@ -185,17 +185,17 @@ let airline#extensions#ale#warning_symbol = 'W:'
 "\ 'valid_exit_codes': [0, 23],
 "\ 'no_append': 1,
 
-let g:neoformat_run_all_formatters = 1 "by default Neoformat stops after the first succeeds
-let g:neoformat_enabled_python = ['yapf', 'autopep8']
-let g:neoformat_enabled_c = ['uncrustify']
-let g:neoformat_enabled_cpp = ['uncrustify']
-" basic formatting when a filetype is not found. Disabled by default.
-" Enable alignment
-let g:neoformat_basic_format_align = 1
-" Enable tab to spaces conversion
-let g:neoformat_basic_format_retab = 1
-" Enable trimmming of trailing whitespace
-let g:neoformat_basic_format_trim = 1
+"let g:neoformat_run_all_formatters = 1 "by default Neoformat stops after the first succeeds
+"let g:neoformat_enabled_python = ['yapf', 'autopep8']
+"let g:neoformat_enabled_c = ['uncrustify']
+"let g:neoformat_enabled_cpp = ['uncrustify']
+"" basic formatting when a filetype is not found. Disabled by default.
+"" Enable alignment
+"let g:neoformat_basic_format_align = 1
+"" Enable tab to spaces conversion
+"let g:neoformat_basic_format_retab = 1
+"" Enable trimmming of trailing whitespace
+"let g:neoformat_basic_format_trim = 1
 
 " ########## ctags #####
 
@@ -208,18 +208,26 @@ let g:neoformat_basic_format_trim = 1
 
 " source $HOME/.config/nvim/grepper-config/basic.vim
 " Optional. The default behaviour should work for most users.
-let g:grepper               = {}
-let g:grepper.tools         = ['git', 'ag', 'grep']
-let g:grepper.jump          = 0
-let g:grepper.next_tool     = '<leader>g'
-let g:grepper.simple_prompt = 1
-let g:grepper.quickfix      = 1
+"let g:grepper               = {}
+"let g:grepper.tools         = ['git', 'ag', 'grep']
+"let g:grepper.jump          = 0
+"let g:grepper.next_tool     = '<leader>g'
+"let g:grepper.simple_prompt = 1
+"let g:grepper.quickfix      = 1
 
 " close vim if only window left is nerdtree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " Set Filetype
 au BufRead,BufNewFile *.vh		set filetype=verilog
+" https://github.com/vhda/verilog_systemverilog.vim
+"set foldmethod=syntax
+"Following an Instance
+":VerilogErrorFormat iverilog 2
+nnoremap <leader>i :VerilogFollowInstance<CR>
+nnoremap <leader>I :VerilogFollowPort<CR>
+"Jump to start of current instance
+nnoremap <leader>u :VerilogGotoInstanceStart<CR>
 
 " https://fortes.com/2017/language-server-neovim/
 " https://github.com/autozimu/LanguageClient-neovim
