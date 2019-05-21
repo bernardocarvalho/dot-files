@@ -220,6 +220,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 " Set Filetype
 au BufRead,BufNewFile *.vh		set filetype=verilog
+au BufRead,BufNewFile *.gp		set filetype=gnuplot
 " https://github.com/vhda/verilog_systemverilog.vim
 "set foldmethod=syntax
 "Following an Instance

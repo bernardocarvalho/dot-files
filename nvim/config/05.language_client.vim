@@ -6,6 +6,7 @@ let g:LanguageClient_serverCommands = {
             \ 'cpp': ['ccls', '--log-file=/tmp/cc.log'],
             \ 'c': ['ccls', '--log-file=/tmp/cc.log'],
             \ 'python': ['$HOME/.pyenv/shims/pyls'],
+            \ 'verilog_systemverilog': ['/usr/local/bin/iverilog'],
             \ }
             "\ 'rust': ['ra_lsp_server'],
             "\ 'haskell': ['hie-wrapper']
