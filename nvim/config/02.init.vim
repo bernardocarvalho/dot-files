@@ -56,6 +56,8 @@ let g:gitgutter_max_signs = 500  " default value
 "{{{
 " leader is ,
 let mapleader = ','
+"vim-sneak
+let g:sneak#s_next = 1
 " No need for ex mode
 nnoremap Q <nop>
 vnoremap // y/<C-R>"<CR>
