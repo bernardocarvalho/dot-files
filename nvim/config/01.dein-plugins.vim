@@ -46,6 +46,7 @@ if dein#load_state('~/.cache/dein')
 
 " Display & Movement
     call dein#add('easymotion/vim-easymotion')
+    call dein#add('justinmk/vim-sneak')
     call dein#add('Yggdroot/indentLine') " Better Visual Guide
     call dein#add('junegunn/vim-easy-align')
     " displays tags in a window, nmap <F8> :TagbarToggle<CR>

@@ -59,6 +59,8 @@ let g:vimtex_compiler_progname = 'nvr'
 "{{{
 " leader is ,
 let mapleader = ','
+"vim-sneak
+let g:sneak#s_next = 1
 " No need for ex mode
 nnoremap Q <nop>
 vnoremap // y/<C-R>"<CR>
