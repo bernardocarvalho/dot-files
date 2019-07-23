@@ -52,6 +52,9 @@ colorscheme NeoSolarized
 let g:gitgutter_override_sign_column_highlight = 0
 let g:gitgutter_max_signs = 500  " default value
 
+" lervag/vimtex
+let g:vimtex_compiler_progname = 'nvr'
+
 " System mappings  ----------------------------------------------------------
 "{{{
 " leader is ,

@@ -26,6 +26,11 @@ call deoplete#custom#option('candidate_marks',
 " call deoplete#custom#source('LanguageClient',
 "            \ 'min_pattern_length',
 "            \ 2)
+" LateX https://jdhao.github.io/2019/03/26/nvim_latex_write_preview/
+" This is new style
+call deoplete#custom#var('omni', 'input_patterns', {
+      \ 'tex': g:vimtex#re#deoplete
+      \})
 
 "if !exists('g:deoplete#omni#input_patterns')
     "let g:deoplete#omni#input_patterns = {}

@@ -34,6 +34,7 @@ if dein#load_state('~/.cache/dein')
         \ })
 
     call dein#add('vhda/verilog_systemverilog.vim') " Verilog/SystemVerilog Syntax and Omni-completion
+    call dein#add('lervag/vimtex') "
 
     call dein#add('junegunn/fzf', { 'build': './install --all', 'merged': 0 })
     call dein#add('junegunn/fzf.vim', { 'depends': 'fzf' })
