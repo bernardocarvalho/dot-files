@@ -37,7 +37,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'kien/ctrlp.vim'
 "Plugin 'tomasr/molokai'
 Plugin 'flazz/vim-colorschemes'
-Plugin 'iamcco/markdown-preview.vim'
+" Plugin 'iamcco/markdown-preview.vim'
 " Install L9 and avoid a Naming conflict if you've already installed a
 " different version somewhere else.
 " Plugin 'ascenator/L9', {'name': 'newL9'}
@@ -92,7 +92,8 @@ set hidden                          " Allow buffer switching without saving
 set iskeyword-=.                    " '.' is an end of word designator
 set iskeyword-=#                    " '#' is an end of word designator
 set iskeyword-=-                    " '-' is an end of word designator
-
+"If you're on OSX and are using zsh 
+set shell=bash\ -i
 " }
 
 " Formatting {
