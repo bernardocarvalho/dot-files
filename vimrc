@@ -74,6 +74,7 @@ nnoremap <leader>b :CtrlPBuffer<CR>
 nnoremap <leader>m :CtrlPMRUFiles<CR>
 nnoremap <leader>t :CtrlPTag<CR>
 
+map <C-n> :NERDTreeToggle<CR>
 
 "filetype plugin indent on   " Automatically detect file types.
 syntax on                   " Syntax highlighting
@@ -120,8 +121,8 @@ set shell=bash\ -i
     let g:solarized_termtrans=1
     let g:solarized_contrast="normal"
     let g:solarized_visibility="normal"
-"    color solarized             " Load a colorscheme
-    color molokai    
+    color solarized             " Load a colorscheme
+    "color molokai    
 
     set backspace=indent,eol,start  " Backspace for dummies
     set linespace=0                 " No extra spaces between rows
@@ -144,7 +145,6 @@ set shell=bash\ -i
 " }
 
 
-map <C-n> :NERDTreeToggle<CR>
 
 " filetype plugin on
 "Uncomment to override defaults:
@@ -165,7 +165,7 @@ set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
 
 " ctrlp
