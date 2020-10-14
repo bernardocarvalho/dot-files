@@ -62,12 +62,17 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 " General {
 let mapleader = ','
-" fugis,ive
+" fugitive
 nmap <leader>gs :Gstatus<cr>
 nmap <leader>gc :Gcommit<cr>
 nmap <leader>ga :Gwrite<cr>
 nmap <leader>gl :Glog<cr>
 nmap <leader>gd :Gdiff<cr>
+
+nnoremap <leader>f :CtrlP<CR>
+nnoremap <leader>b :CtrlPBuffer<CR>
+nnoremap <leader>m :CtrlPMRUFiles<CR>
+nnoremap <leader>t :CtrlPTag<CR>
 
 
 "filetype plugin indent on   " Automatically detect file types.
