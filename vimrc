@@ -1,5 +1,10 @@
 " Do first:  git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 "
+" deletes any leading whitespace at the beginning of each line.
+" :%s/^\s\+//e
+" command deletes any trailing whitespace at the end of each line.
+" :%s/\s\+$//e
+
 set nocompatible              " be iMproved, required
 filetype off                  " required
 

@@ -7,7 +7,7 @@
 #
 #If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-#export PATH="$HOME/.platformio/penv/bin:$PATH"
+# export PATH="$HOME/.platformio/penv/bin:$PATH"
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/bernardo/.oh-my-zsh"
@@ -114,6 +114,10 @@ export LANG=en_US.UTF-8
 #   export EDITOR='mvim'
 # fi
 
+# Prevent ask passord GUI
+[ -n "$SSH_CONNECTION" ] && unset SSH_ASKPASS
+export GIT_ASKPASS=
+
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
@@ -125,13 +129,13 @@ export LANG=en_US.UTF-8
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias get_idf='. $HOME/esp/esp-idf/export.sh'
-alias get_platformio='. $HOME/PIO_Projects/export.sh'
-alias get_pyenv='. $HOME/python/pyenv-export.sh'
+# alias get_idf='. $HOME/esp/esp-idf/export.sh'
+# alias get_platformio='. $HOME/PIO_Projects/export.sh'
+# alias get_pyenv='. $HOME/python/pyenv-export.sh'
 #PYENV
 #https://medium.com/@raycent/managing-python-on-macos-the-clean-way-7673cab874f6
 #alias brew='env PATH="${PATH//$(pyenv root)/shims:/}" brew'
-export PICO_SDK_PATH="$HOME/git/pico-sdk"
+# export PICO_SDK_PATH="$HOME/git/pico-sdk"
 #if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 #if command -v pyenv 1>/dev/null 2>&1; then
 #  eval "$(pyenv init -)"
