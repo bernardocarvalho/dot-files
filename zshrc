@@ -7,6 +7,7 @@
 #
 #If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
+#export PATH="$HOME/.platformio/penv/bin:$PATH"
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/bernardo/.oh-my-zsh"
@@ -79,7 +80,22 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 #plugins=(git)
-plugins=(git brew osx zsh-completions zsh-autosuggestions zsh-syntax-highlighting)
+export FZF_BASE="$HOME/.vim/bundle/fzf"
+export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
+
+case "$OSTYPE" in
+  darwin*)
+    # ...
+    plugins=(git fzf brew osx zsh-completions zsh-autosuggestions zsh-syntax-highlighting)
+  ;;
+  linux*)
+    # ...
+    plugins=(git fzf zsh-completions zsh-autosuggestions zsh-syntax-highlighting)
+  ;;
+  dragonfly*|freebsd*|netbsd*|openbsd*)
+    # ...
+  ;;
+esac
 autoload -U compinit && compinit
 
 source $ZSH/oh-my-zsh.sh
@@ -89,7 +105,7 @@ source $ZSH/oh-my-zsh.sh
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -109,3 +125,15 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias get_idf='. $HOME/esp/esp-idf/export.sh'
+alias get_platformio='. $HOME/PIO_Projects/export.sh'
+alias get_pyenv='. $HOME/python/pyenv-export.sh'
+#PYENV
+#https://medium.com/@raycent/managing-python-on-macos-the-clean-way-7673cab874f6
+#alias brew='env PATH="${PATH//$(pyenv root)/shims:/}" brew'
+export PICO_SDK_PATH="$HOME/git/pico-sdk"
+#if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+#if command -v pyenv 1>/dev/null 2>&1; then
+#  eval "$(pyenv init -)"
+#  eval "$(pyenv virtualenv-init -)"
+#fi
