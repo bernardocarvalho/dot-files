@@ -172,3 +172,5 @@ let g:syntastic_check_on_wq = 0
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
+" File Types non-default
+au BufRead,BufNewFile *.vh set filetype=verilog
