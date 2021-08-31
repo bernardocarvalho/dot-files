@@ -1,5 +1,10 @@
 " Do first:  git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 "
+" deletes any leading whitespace at the beginning of each line.
+" :%s/^\s\+//e
+" command deletes any trailing whitespace at the end of each line.
+" :%s/\s\+$//e
+
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -37,9 +42,11 @@ Plugin 'scrooloose/syntastic'
 Plugin 'kien/ctrlp.vim'
 "Plugin 'tomasr/molokai'
 Plugin 'flazz/vim-colorschemes'
-Plugin 'junegunn/fzf'
+Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plugin 'junegunn/fzf.vim'
-" Plugin 'iamcco/markdown-preview.vim'
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
+Plugin 'iamcco/markdown-preview.nvim'
 " Install L9 and avoid a Naming conflict if you've already installed a
 " different version somewhere else.
 " Plugin 'ascenator/L9', {'name': 'newL9'}
