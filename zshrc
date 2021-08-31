@@ -10,7 +10,16 @@
 # export PATH="$HOME/.platformio/penv/bin:$PATH"
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/bernardo/.oh-my-zsh"
+case "$OSTYPE" in
+  darwin*)
+    # ...
+    export ZSH="/Users/bernardo/.oh-my-zsh"
+  ;;
+  linux*)
+    # ...
+    export ZSH="/home/bernardo/.oh-my-zsh"
+  ;;
+esac
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -129,9 +138,8 @@ export GIT_ASKPASS=
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-<<<<<<< HEAD
 tmux=" TERM=xterm-256color tmux"
-=======
+#=======
 # alias get_idf='. $HOME/esp/esp-idf/export.sh'
 # alias get_platformio='. $HOME/PIO_Projects/export.sh'
 # alias get_pyenv='. $HOME/python/pyenv-export.sh'
@@ -144,4 +152,3 @@ tmux=" TERM=xterm-256color tmux"
 #  eval "$(pyenv init -)"
 #  eval "$(pyenv virtualenv-init -)"
 #fi
->>>>>>> 1f8ae2cb10466071b73751a3360017fed30e7106
