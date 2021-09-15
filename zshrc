@@ -89,8 +89,8 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 #plugins=(git)
-export FZF_BASE="$HOME/.vim/bundle/fzf"
-export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
+# export FZF_BASE="$HOME/.vim/bundle/fzf"
+# export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 
 case "$OSTYPE" in
   darwin*)
@@ -139,6 +139,9 @@ export GIT_ASKPASS=
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 tmux=" TERM=xterm-256color tmux"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 #=======
 # alias get_idf='. $HOME/esp/esp-idf/export.sh'
 # alias get_platformio='. $HOME/PIO_Projects/export.sh'
