@@ -71,16 +71,22 @@ filetype plugin indent on    " required
 " General {
 let mapleader = ','
 " fugitive
-nmap <leader>gs :Gstatus<cr>
-nmap <leader>gc :Gcommit<cr>
+nmap <leader>gs :Git<cr>
+nmap <leader>gc :Git commit<cr>
 nmap <leader>ga :Gwrite<cr>
-nmap <leader>gl :Glog<cr>
-nmap <leader>gd :Gdiff<cr>
+nmap <leader>gl :Git log<cr>
+nmap <leader>gd :Git diff<cr>
 
 nnoremap <leader>f :CtrlP<CR>
 nnoremap <leader>b :CtrlPBuffer<CR>
 nnoremap <leader>m :CtrlPMRUFiles<CR>
 nnoremap <leader>t :CtrlPTag<CR>
+
+" Get used to  hjkl
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
 
 map <C-n> :NERDTreeToggle<CR>
 
