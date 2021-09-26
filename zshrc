@@ -138,7 +138,7 @@ export GIT_ASKPASS=
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-tmux=" TERM=xterm-256color tmux"
+# tmux=" TERM=xterm-256color tmux"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
