@@ -1,5 +1,6 @@
 " Do first:  git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 "
+"https://vi.stackexchange.com/questions/454/whats-the-simplest-way-to-strip-trailing-whitespace-from-all-lines-in-a-file
 " deletes any leading whitespace at the beginning of each line.
 " :%s/^\s\+//e
 " command deletes any trailing whitespace at the end of each line.
@@ -29,12 +30,12 @@ Plugin 'tpope/vim-fugitive'
 "Plugin 'file:///home/gmarik/path/to/plugin'
 " The sparkup vim script is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.
-Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+" write HTML code faster. 
+"Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'preservim/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'preservim/nerdcommenter'
 Plugin 'tpope/vim-surround'
-Plugin 'suan/vim-instant-markdown', {'rtp': 'after'}
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 " Syntax highlighting'
@@ -47,6 +48,7 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plugin 'junegunn/fzf.vim'
 Plugin 'godlygeek/tabular'
+"Plugin 'suan/vim-instant-markdown', {'rtp': 'after'}
 Plugin 'plasticboy/vim-markdown'
 Plugin 'iamcco/markdown-preview.nvim'
 Plugin 'vhda/verilog_systemverilog.vim'
@@ -104,7 +106,7 @@ nnoremap <C-f> :NERDTreeFind<CR>
 "autocmd BufWinEnter * silent NERDTreeMirror
 " Exit Vim if NERDTree is the only window left.
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
-            \ quit | endif
+\ quit | endif
 
 
 "filetype plugin indent on   " Automatically detect file types.
@@ -113,11 +115,11 @@ set mousehide               " Hide the mouse cursor while typing
 scriptencoding utf-8
 
 if has('clipboard')
-	if has('unnamedplus')  " When possible use + register for copy-paste
-            set clipboard=unnamed,unnamedplus
-        else         " On mac and Windows, use * register for copy-paste
-		set clipboard=unnamed
-    endif
+if has('unnamedplus')  " When possible use + register for copy-paste
+set clipboard=unnamed,unnamedplus
+else         " On mac and Windows, use * register for copy-paste
+set clipboard=unnamed
+endif
 endif
 
 "set autowrite                       " Automatically write a file when leaving a modified buffer
@@ -125,8 +127,18 @@ set shortmess+=filmnrxoOtT          " Abbrev. of messages (avoids 'hit enter')
 set viewoptions=folds,options,cursor,unix,slash " Better Unix / Windows compatibility
 set virtualedit=onemore             " Allow for cursor beyond last character
 set history=1000                    " Store a ton of history (default is 20)
-set spell                           " Spell checking on
 set hidden                          " Allow buffer switching without saving
+"set spell                           " Spell checking on
+" setlocal spell spelllang=en_us
+":set nospell
+"
+" set spellsuggest=fast,20 "Don't show too much suggestion for spell
+"     check.
+"
+set spellfile=~/dot-files/spell/en.utf-8.add
+autocmd BufRead,BufNewFile *.md setlocal spell
+autocmd FileType gitcommit setlocal spell
+
 set iskeyword-=.                    " '.' is an end of word designator
 set iskeyword-=#                    " '#' is an end of word designator
 set iskeyword-=-                    " '-' is an end of word designator
@@ -136,15 +148,15 @@ set shell=bash\ -i
 
 " Formatting {
 
-    set nowrap                      " Do not wrap long lines
-    set autoindent                  " Indent at the same level of the previous line
-    set shiftwidth=4                " Use indents of 4 spaces
-    set expandtab                   " Tabs are spaces, not tabs
-    set tabstop=4                   " An indentation every four columns
-    set softtabstop=4               " Let backspace delete indent
-    set nojoinspaces                " Prevents inserting two spaces after punctuation on a join (J)
-    set splitright                  " Puts new vsplit windows to the right of the current
-    set splitbelow                  " Puts new split windows to the bottom of the current
+set nowrap                      " Do not wrap long lines
+set autoindent                  " Indent at the same level of the previous line
+set shiftwidth=4                " Use indents of 4 spaces
+set expandtab                   " Tabs are spaces, not tabs
+set tabstop=4                   " An indentation every four columns
+set softtabstop=4               " Let backspace delete indent
+set nojoinspaces                " Prevents inserting two spaces after punctuation on a join (J)
+set splitright                  " Puts new vsplit windows to the right of the current
+set splitbelow                  " Puts new split windows to the bottom of the current
 " }
 " Vim UI {
 syntax on                   " Syntax highlighting
@@ -159,33 +171,33 @@ set background=dark
 "color molokai    
 "autocmd vimenter * ++nested colorscheme gruvbox t
 "if (has("termguicolors"))
-      "set termguicolors
-  "endif
+"set termguicolors
+"endif
 
 " Enable true color 
 if exists('+termguicolors')
-  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-  set termguicolors
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+set termguicolors
 endif
 
-  set backspace=indent,eol,start  " Backspace for dummies
-  set linespace=0                 " No extra spaces between rows
-  set number                      " Line numbers on
-  set showmatch                   " Show matching brackets/parenthesis
-  set incsearch                   " Find as you type search
-  set hlsearch                    " Highlight search terms
-  set winminheight=0              " Windows can be 0 line high
-  set ignorecase                  " Case insensitive search
-  set smartcase                   " Case sensitive when uc present
-  set wildmenu                    " Show list instead of just completing
-  set wildmode=list:longest,full  " Command <Tab> completion, list matches, then longest common part, then all.
-  set whichwrap=b,s,h,l,<,>,[,]   " Backspace and cursor keys wrap too
-  set scrolljump=5                " Lines to scroll when cursor leaves screen
-  set scrolloff=3                 " Minimum lines to keep above and below cursor
-  set foldenable                  " Auto fold code
-  set list
-  set listchars=tab:›\ ,trail:•,extends:#,nbsp:. " Highlight problematic whitespace
+set backspace=indent,eol,start  " Backspace for dummies
+set linespace=0                 " No extra spaces between rows
+set number                      " Line numbers on
+set showmatch                   " Show matching brackets/parenthesis
+set incsearch                   " Find as you type search
+set hlsearch                    " Highlight search terms
+set winminheight=0              " Windows can be 0 line high
+set ignorecase                  " Case insensitive search
+set smartcase                   " Case sensitive when uc present
+set wildmenu                    " Show list instead of just completing
+set wildmode=list:longest,full  " Command <Tab> completion, list matches, then longest common part, then all.
+set whichwrap=b,s,h,l,<,>,[,]   " Backspace and cursor keys wrap too
+set scrolljump=5                " Lines to scroll when cursor leaves screen
+set scrolloff=3                 " Minimum lines to keep above and below cursor
+set foldenable                  " Auto fold code
+set list
+set listchars=tab:›\ ,trail:•,extends:#,nbsp:. " Highlight problematic whitespace
 
 " }
 
