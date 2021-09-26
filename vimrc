@@ -41,7 +41,9 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'scrooloose/syntastic'
 Plugin 'kien/ctrlp.vim'
 "Plugin 'tomasr/molokai'
-Plugin 'flazz/vim-colorschemes'
+" Plugin 'flazz/vim-colorschemes'
+"Plugin 'morhetz/gruvbox'
+Plugin 'altercation/vim-colors-solarized'
 Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plugin 'junegunn/fzf.vim'
 Plugin 'godlygeek/tabular'
@@ -88,10 +90,24 @@ noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
 
-map <C-n> :NERDTreeToggle<CR>
+"  map <C-n> :NERDTreeToggle<CR>
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
+
+" Start NERDTree when Vim is opened and leave the cursor in it.
+autocmd VimEnter * NERDTree
+" Start NERDTree when Vim is opened and put the cursor back in the other window.
+autocmd VimEnter * NERDTree | wincmd p
+" Open the existing NERDTree on each new tab.
+autocmd BufWinEnter * silent NERDTreeMirror
+" Exit Vim if NERDTree is the only window left.
+autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
+            \ quit | endif
+
 
 "filetype plugin indent on   " Automatically detect file types.
-syntax on                   " Syntax highlighting
 set mouse=a                 " Automatically enable mouse usage
 set mousehide               " Hide the mouse cursor while typing
 scriptencoding utf-8
@@ -131,12 +147,18 @@ set shell=bash\ -i
     set splitbelow                  " Puts new split windows to the bottom of the current
 " }
 " Vim UI {
-    let g:solarized_termcolors=256
-    let g:solarized_termtrans=1
-    let g:solarized_contrast="normal"
-    let g:solarized_visibility="normal"
-    color solarized             " Load a colorscheme
-    "color molokai    
+syntax on                   " Syntax highlighting
+"let g:solarized_termcolors=256
+" let g:solarized_termtrans=1
+" let g:solarized_contrast="normal"
+" let g:solarized_visibility="normal"
+"set background=dark
+set background=light
+" jcolorscheme solarized
+" olor solarized             " Load a colorscheme
+"color molokai    
+"autocmd vimenter * ++nested colorscheme gruvbox t
+set termguicolors
 
     set backspace=indent,eol,start  " Backspace for dummies
     set linespace=0                 " No extra spaces between rows
