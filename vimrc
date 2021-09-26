@@ -136,6 +136,9 @@ set hidden                          " Allow buffer switching without saving
 "     check.
 "
 set spellfile=~/dot-files/spell/en.utf-8.add
+" Regenerate .spl
+" you must run mkspell to re-generate it if you edit the add file
+" :mkspell ~/dot-files/spell/en.utf-8.add
 autocmd BufRead,BufNewFile *.md setlocal spell
 autocmd FileType gitcommit setlocal spell
 
