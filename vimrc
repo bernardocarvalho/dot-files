@@ -97,11 +97,11 @@ nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
 
 " Start NERDTree when Vim is opened and leave the cursor in it.
-autocmd VimEnter * NERDTree
+"autocmd VimEnter * NERDTree
 " Start NERDTree when Vim is opened and put the cursor back in the other window.
-autocmd VimEnter * NERDTree | wincmd p
+"autocmd VimEnter * NERDTree | wincmd p
 " Open the existing NERDTree on each new tab.
-autocmd BufWinEnter * silent NERDTreeMirror
+"autocmd BufWinEnter * silent NERDTreeMirror
 " Exit Vim if NERDTree is the only window left.
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
             \ quit | endif
@@ -152,15 +152,22 @@ let g:solarized_termcolors=256
 " let g:solarized_termtrans=1
 " let g:solarized_contrast="normal"
 " let g:solarized_visibility="normal"
-"set background=dark
-set background=light
+set background=dark
+"set background=light
 " jcolorscheme solarized
 " olor solarized             " Load a colorscheme
 "color molokai    
 "autocmd vimenter * ++nested colorscheme gruvbox t
-if (has("termguicolors"))
-      set termguicolors
-  endif
+"if (has("termguicolors"))
+      "set termguicolors
+  "endif
+
+" Enable true color 
+if exists('+termguicolors')
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+  set termguicolors
+endif
 
   set backspace=indent,eol,start  " Backspace for dummies
   set linespace=0                 " No extra spaces between rows
