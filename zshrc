@@ -95,11 +95,11 @@ ZSH_THEME="robbyrussell"
 case "$OSTYPE" in
   darwin*)
     # ...
-    plugins=(git fzf brew osx zsh-completions zsh-autosuggestions zsh-syntax-highlighting)
+    plugins=(git z fzf sudo alias-finder copydir copyfile web-search tmux brew osx zsh-completions zsh-autosuggestions zsh-syntax-highlighting)
   ;;
   linux*)
     # ...
-    plugins=(git fzf zsh-completions zsh-autosuggestions zsh-syntax-highlighting)
+    plugins=(git z fzf sudo alias-finder copydir copyfile web-search tmux zsh-completions zsh-autosuggestions zsh-syntax-highlighting)
   ;;
   dragonfly*|freebsd*|netbsd*|openbsd*)
     # ...
