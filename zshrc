@@ -17,7 +17,8 @@ case "$OSTYPE" in
   ;;
   linux*)
     # ...
-    export ZSH="/home/bernardo/.oh-my-zsh"
+    #export ZSH="/home/bernardo/.oh-my-zsh"
+    export ZSH="$HOME/.oh-my-zsh"
   ;;
 esac
 
@@ -138,9 +139,11 @@ export GIT_ASKPASS=
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-tmux=" TERM=xterm-256color tmux"
+# tmux=" TERM=xterm-256color tmux"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+#Ether stuff
+[ -f ~/.esther.sh ] && source ~/.esther.sh
 
 #=======
 # alias get_idf='. $HOME/esp/esp-idf/export.sh'
