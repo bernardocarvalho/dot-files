@@ -21,7 +21,6 @@ Plugin 'VundleVim/Vundle.vim'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
-Plugin 'tpope/vim-fugitive'
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
 " Git plugin not hosted on GitHub
@@ -36,6 +35,9 @@ Plugin 'preservim/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'preservim/nerdcommenter'
 Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-unimpaired'
+Plugin 'easymotion/vim-easymotion'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 " Syntax highlighting'
@@ -97,6 +99,16 @@ nnoremap <leader>n :NERDTreeFocus<CR>
 "nnoremap <C-n> :NERDTree<CR>
 "nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
+
+" Non US Keyboard, 
+" [c  jump to previous hunk
+nmap < [
+" ]c    jump to next hunk
+nmap > ]
+omap < [
+omap > ]
+xmap < [
+xmap > ]
 
 " Start NERDTree when Vim is opened and leave the cursor in it.
 "autocmd VimEnter * NERDTree
