@@ -1,0 +1,12 @@
+[user]
+	email = bernardo.carvalho@tecnico.ulisboa.pt
+	name = bernardo carvalho
+[core]
+	editor = vim
+[push]
+	default = matching
+[pull]
+	rebase = true
+[credential]
+	helper = cache
+# git config --global credential.helper 'cache --timeout=3600' 
