@@ -43,6 +43,8 @@ Plugin 'vim-airline/vim-airline-themes'
 " Syntax highlighting'
 Plugin 'scrooloose/syntastic'
 Plugin 'kien/ctrlp.vim'
+" Python Autocomplete
+" Plugin 'davidhalter/jedi-vim'
 "Plugin 'tomasr/molokai'
 " Plugin 'flazz/vim-colorschemes'
 "Plugin 'morhetz/gruvbox'
