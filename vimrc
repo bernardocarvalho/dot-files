@@ -45,6 +45,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'kien/ctrlp.vim'
 " Python Autocomplete
 " Plugin 'davidhalter/jedi-vim'
+Plugin 'kiteco/vim-plugin'
 "Plugin 'tomasr/molokai'
 " Plugin 'flazz/vim-colorschemes'
 "Plugin 'morhetz/gruvbox'
