@@ -48,6 +48,7 @@ Plugin 'kien/ctrlp.vim'
 "Plugin 'tomasr/molokai'
 " Plugin 'flazz/vim-colorschemes'
 "Plugin 'morhetz/gruvbox'
+Plugin 'dense-analysis/ale'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plugin 'junegunn/fzf.vim'
