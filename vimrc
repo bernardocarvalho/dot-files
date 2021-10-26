@@ -92,10 +92,10 @@ nnoremap <leader>m :CtrlPMRUFiles<CR>
 nnoremap <leader>t :CtrlPTag<CR>
 
 " Get used to  hjkl
-"noremap <Up> <Nop>
-"noremap <Down> <Nop>
-"noremap <Left> <Nop>
-"noremap <Right> <Nop>
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
 " Disable Arrow keys in Normal mode
 " Remove newbie crutches in Command Mode
 "cnoremap <Down> <Nop>
@@ -110,16 +110,16 @@ nnoremap <leader>t :CtrlPTag<CR>
 "inoremap <Up> <Nop>
 
 " Remove newbie crutches in Normal Mode
-nnoremap <Down> <Nop>
-nnoremap <Left> <Nop>
-nnoremap <Right> <Nop>
-nnoremap <Up> <Nop>
+"nnoremap <Down> <Nop>
+"nnoremap <Left> <Nop>
+"nnoremap <Right> <Nop>
+"nnoremap <Up> <Nop>
 
 " Remove newbie crutches in Visual Mode
-vnoremap <Down> <Nop>
-vnoremap <Left> <Nop>
-vnoremap <Right> <Nop>
-vnoremap <Up> <Nop>
+"vnoremap <Down> <Nop>
+"vnoremap <Left> <Nop>
+"vnoremap <Right> <Nop>
+"vnoremap <Up> <Nop>
 
 nnoremap <C-n> :NERDTreeToggle<CR>
 nnoremap <leader>n :NERDTreeFocus<CR>
@@ -144,8 +144,7 @@ xmap > ]
 " Open the existing NERDTree on each new tab.
 "autocmd BufWinEnter * silent NERDTreeMirror
 " Exit Vim if NERDTree is the only window left.
-autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
-\ quit | endif
+autocmd BufEnter * if (tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree()) | quit | endif
 
 
 "filetype plugin indent on   " Automatically detect file types.
