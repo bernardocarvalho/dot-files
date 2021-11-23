@@ -48,7 +48,7 @@ Plugin 'kien/ctrlp.vim'
 "Plugin 'tomasr/molokai'
 " Plugin 'flazz/vim-colorschemes'
 "Plugin 'morhetz/gruvbox'
-Plugin 'dense-analysis/ale'
+"Plugin 'dense-analysis/ale'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plugin 'junegunn/fzf.vim'
@@ -85,7 +85,8 @@ nmap <leader>gc :Git commit<cr>
 nmap <leader>ga :Gwrite<cr>
 nmap <leader>gl :Git log<cr>
 nmap <leader>gd :Git diff<cr>
-
+" https://www.rosipov.com/blog/use-vimdiff-as-git-mergetool/
+"
 nnoremap <leader>f :CtrlP<CR>
 nnoremap <leader>b :CtrlPBuffer<CR>
 nnoremap <leader>m :CtrlPMRUFiles<CR>

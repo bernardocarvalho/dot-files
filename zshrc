@@ -146,6 +146,7 @@ export GIT_ASKPASS=
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 #Ether stuff
 [ -f ~/.esther.sh ] && source ~/.esther.sh
+[ -f ~/.xilinx.sh ] && source ~/.xilinx.sh
 
 #=======
 # alias get_idf='. $HOME/esp/esp-idf/export.sh'
