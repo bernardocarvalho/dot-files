@@ -97,7 +97,7 @@ case "$OSTYPE" in
   darwin*)
     # ...
     export EDITOR='vim'
-    plugins=(git z fzf sudo alias-finder copydir copyfile web-search tmux brew osx zsh-completions zsh-autosuggestions zsh-syntax-highlighting)
+    plugins=(git z fzf sudo alias-finder copydir copyfile web-search tmux brew macos zsh-completions zsh-autosuggestions zsh-syntax-highlighting)
   ;;
   linux*)
     # ...
@@ -161,3 +161,6 @@ export GIT_ASKPASS=
 #  eval "$(pyenv init -)"
 #  eval "$(pyenv virtualenv-init -)"
 #fi
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
