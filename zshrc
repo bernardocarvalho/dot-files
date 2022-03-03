@@ -97,12 +97,12 @@ case "$OSTYPE" in
   darwin*)
     # ...
     export EDITOR='vim'
-    plugins=(git z fzf sudo alias-finder copydir copyfile web-search tmux brew macos zsh-completions zsh-autosuggestions zsh-syntax-highlighting)
+    plugins=(git z fzf sudo macos alias-finder copypath copyfile web-search tmux brew zsh-completions zsh-autosuggestions zsh-syntax-highlighting)
   ;;
   linux*)
     # ...
     export EDITOR='vim'
-    plugins=(git z fzf sudo alias-finder copydir copyfile web-search tmux zsh-completions zsh-autosuggestions zsh-syntax-highlighting)
+    plugins=(git z fzf sudo alias-finder copypath copyfile web-search tmux zsh-completions zsh-autosuggestions zsh-syntax-highlighting)
   ;;
   dragonfly*|freebsd*|netbsd*|openbsd*)
     # ...
