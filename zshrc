@@ -9,15 +9,18 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 # export PATH="$HOME/.platformio/penv/bin:$PATH"
 
+export ZSH="$HOME/.oh-my-zsh"
 # Path to your oh-my-zsh installation.
 case "$OSTYPE" in
   darwin*)
     # ...
-    export ZSH="/Users/bernardo/.oh-my-zsh"
+#    export ZSH="/Users/bernardo/.oh-my-zsh"
+    export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+#For compilers to find openjdk you may need to set:
+#  export CPPFLAGS="-I/opt/homebrew/opt/openjdk/include"
   ;;
   linux*)
     # ...
-    #export ZSH="/home/bernardo/.oh-my-zsh"
     export ZSH="$HOME/.oh-my-zsh"
   ;;
 esac
@@ -97,7 +100,7 @@ case "$OSTYPE" in
   darwin*)
     # ...
     export EDITOR='vim'
-    plugins=(git z fzf sudo macos alias-finder copypath copyfile web-search tmux brew zsh-completions zsh-autosuggestions zsh-syntax-highlighting)
+    plugins=(git z fzf docker sudo macos alias-finder copypath copyfile web-search tmux brew zsh-completions zsh-autosuggestions zsh-syntax-highlighting)
   ;;
   linux*)
     # ...
