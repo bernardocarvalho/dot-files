@@ -5,6 +5,8 @@
 " :%s/^\s\+//e
 " command deletes any trailing whitespace at the end of each line.
 " :%s/\s\+$//e
+" remove ^M at end
+" :s/^M$//      s/^M$//
 
 set nocompatible              " be iMproved, required
 filetype off                  " required
