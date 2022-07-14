@@ -100,7 +100,7 @@ case "$OSTYPE" in
   darwin*)
     # ...
     export EDITOR='vim'
-    plugins=(git z fzf docker sudo macos alias-finder copypath copyfile web-search tmux brew zsh-completions zsh-autosuggestions zsh-syntax-highlighting)
+    plugins=(git z fzf sudo macos common-aliases docker alias-finder aliases copypath copyfile web-search tmux brew zsh-completions zsh-autosuggestions zsh-syntax-highlighting)
   ;;
   linux*)
     # ...
@@ -147,9 +147,11 @@ export GIT_ASKPASS=
 # tmux=" TERM=xterm-256color tmux"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-#Ether stuff
+# Optional configs
 [ -f ~/.esther.sh ] && source ~/.esther.sh
 [ -f ~/.xilinx.sh ] && source ~/.xilinx.sh
+[ -f ~/epicsenv.sh ] && source ~/epicsenv.sh
+[ -f ~/platformio.sh ] && source ~/platformio.sh
 
 #=======
 # alias get_idf='. $HOME/esp/esp-idf/export.sh'
