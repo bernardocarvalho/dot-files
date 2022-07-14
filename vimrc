@@ -80,6 +80,8 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 "
 " Custom 
+" brew change
+set rtp+=/usr/local/opt/fzf
 " Put your non-Plugin stuff after this line
 " General {
 let mapleader = ','
