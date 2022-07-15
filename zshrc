@@ -152,6 +152,7 @@ export GIT_ASKPASS=
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 # Optional configs
 [ -f ~/.esther.sh ] && source ~/.esther.sh
+[ -f ~/epics-env.sh ] && source ~/epics-env.sh
 [ -f ~/.xilinx.sh ] && source ~/.xilinx.sh
 [ -f ~/epicsenv.sh ] && source ~/epicsenv.sh
 [ -f ~/platformio.sh ] && source ~/platformio.sh
