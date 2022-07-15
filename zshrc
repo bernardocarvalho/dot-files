@@ -16,6 +16,9 @@ case "$OSTYPE" in
     # ...
 #    export ZSH="/Users/bernardo/.oh-my-zsh"
     export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+    # Setting for the new UTF-8 terminal support in
+    export LC_CTYPE=en_US.UTF-8
+    export LC_ALL=en_US.UTF-8
 #For compilers to find openjdk you may need to set:
 #  export CPPFLAGS="-I/opt/homebrew/opt/openjdk/include"
   ;;
