@@ -216,11 +216,10 @@ let g:solarized_termcolors=256
 " let g:solarized_contrast="normal"
 " let g:solarized_visibility="normal"
 set background=dark
-"set background=light
-" jcolorscheme solarized
-" olor solarized             " Load a colorscheme
-"color molokai    
-"autocmd vimenter * ++nested colorscheme gruvbox t
+" set background=light
+" color solarized             " Load a colorscheme
+" color molokai
+" autocmd vimenter * ++nested colorscheme gruvbox t
 "if (has("termguicolors"))
 "set termguicolors
 "endif
@@ -285,3 +284,5 @@ let g:ctrlp_cmd = 'CtrlP'
 " File Types non-default
 au BufRead,BufNewFile *.vh set filetype=verilog
 
+colorscheme solarized
+" colorscheme blue

@@ -7,7 +7,7 @@
 #
 #If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-# export PATH="$HOME/.platformio/penv/bin:$PATH"
+# export PATH="$HOME/bin:$HOME/.local/bin:$HOME/.platformio/penv/bin:$PATH"
 
 export ZSH="$HOME/.oh-my-zsh"
 # Path to your oh-my-zsh installation.
@@ -103,12 +103,12 @@ case "$OSTYPE" in
   darwin*)
     # ...
     export EDITOR='vim'
-    plugins=(git z fzf sudo macos common-aliases docker alias-finder aliases copypath copyfile web-search tmux brew zsh-completions zsh-autosuggestions zsh-syntax-highlighting)
+    plugins=(git z fzf sudo macos common-aliases docker alias-finder aliases copypath copyfile web-search brew zsh-completions zsh-autosuggestions zsh-syntax-highlighting)
   ;;
   linux*)
     # ...
     export EDITOR='vim'
-    plugins=(git z fzf sudo alias-finder copypath copyfile web-search tmux zsh-completions zsh-autosuggestions zsh-syntax-highlighting)
+    plugins=(git z fzf sudo alias-finder copypath copyfile web-search zsh-completions zsh-autosuggestions zsh-syntax-highlighting)
   ;;
   dragonfly*|freebsd*|netbsd*|openbsd*)
     # ...
