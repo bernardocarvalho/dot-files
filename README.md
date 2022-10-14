@@ -23,13 +23,15 @@
 ```
 ## Zsh
 ### Requirements
-- ["Oh My ZSH!"]([https://github.com/VundleVim/Vundle.vim.git](https://ohmyz.sh/)
+- ["Oh My ZSH!"](https://ohmyz.sh/)
 - zsh-completions
 - zsh-autosuggestions
 - zsh-syntax-highlighting
+- [fzf "command-line fuzzy finder"](https://github.com/junegunn/fzf)
 
 ```bash
  $ cd  ~
+ $ sudo apt install fzf # (or brew install fzf)
  $ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
  $ git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
  $ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
