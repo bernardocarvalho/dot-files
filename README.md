@@ -17,6 +17,7 @@
 ```bash
  $ cd  ~
  $ git clone https://github.com/bernardocarvalho/dot-files
+ $ mv .vimrc .vimrc.orig  # If exists
  $ ln -s ~/dot-files/vim  ~/.vimrc
  $ vim
  :PluginInstall
@@ -38,6 +39,7 @@
  $ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
  $ git clone https://github.com/bernardocarvalho/dot-files
+ $ mv .zshrc .zshrc.orig
  $ ln -s ~/dot-files/zshrc ~/.zshrc
  (logout/login)
 ```
