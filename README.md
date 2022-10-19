@@ -13,7 +13,6 @@
 ### Requirements
 - [https://github.com/VundleVim/Vundle](https://github.com/VundleVim/Vundle.vim.git)
 
-
 ```bash
  $ cd  ~
  $ git clone https://github.com/bernardocarvalho/dot-files
@@ -42,6 +41,14 @@
  $ mv .zshrc .zshrc.orig
  $ ln -s ~/dot-files/zshrc ~/.zshrc
  (logout/login)
+```
+
+## Tmux
+### Requirements
+- [TPM](https://github.com/tmux-plugins/tpm)
+
+```bash
+$ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 ## References
 

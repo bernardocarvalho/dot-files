@@ -15,7 +15,7 @@ case "$OSTYPE" in
   darwin*)
     # ...
 #    export ZSH="/Users/bernardo/.oh-my-zsh"
-    export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+    export PATH="$HOME/bin:/opt/homebrew/opt/openjdk/bin:$PATH"
     # Setting for the new UTF-8 terminal support in
     export LC_CTYPE=en_US.UTF-8
     export LC_ALL=en_US.UTF-8
@@ -24,7 +24,7 @@ case "$OSTYPE" in
   ;;
   linux*)
     # ...
-    export ZSH="$HOME/.oh-my-zsh"
+    #export ZSH="$HOME/.oh-my-zsh"
   ;;
 esac
 
@@ -51,7 +51,7 @@ ZSH_THEME="robbyrussell"
 # HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
+DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to automatically update without prompting.
 # DISABLE_UPDATE_PROMPT="true"
