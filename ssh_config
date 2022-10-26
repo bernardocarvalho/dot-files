@@ -1,0 +1,34 @@
+Host fumanchu
+    HostName 193.136.137.182
+
+Host kane584
+    HostName kane584.tecnico.ulisboa.pt
+    User 
+    ForwardX11 yes
+
+# IPFN - Lx
+Host marte-sb
+    #HostName 10.136.240.213
+    HostName 10.136.241.188
+    #    HostName 10.136.234.205
+    User 
+    ForwardX11 yes
+
+Host marte-ppr
+    HostName 10.136.224.230
+    User 
+   ForwardX11 yes
+
+Host beagle
+  #  link/ether 1c:ba:8c:9f:de:04 brd ff:ff:ff:ff:ff:ff
+    HostName 10.136.216.247
+    # sudo nmap -sn 10.136.192.0/18 | grep 1C:BA
+    User debian
+
+# CTN 
+Host golem
+    HostName 10.10.136.104
+    # link/ether A0:36:9F:06:CE:CB
+    User 
+    ForwardX11 yes
+
