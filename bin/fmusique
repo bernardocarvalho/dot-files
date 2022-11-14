@@ -1,0 +1,16 @@
+#!/usr/bin/bash 
+if screen -list | grep -q "vlc"; then
+    echo "Server is running!"
+     /usr/bin/screen -SX vlc quit;
+else
+    echo "Server dead"
+fi	
+: ${URL:="https://icecast.radiofrance.fr/francemusique-hifi.aac"}
+VOL="${1:-0.8}"
+echo $URL
+echo "$VOL"
+# if [ -z "$STY" ]; then exec screen -dm -S vlc /bin/bash "$0"; fi
+#screen -dm -S vlc /bin/bash cvlc --gain $VOL https://icecast.radiofrance.fr/francemusique-hifi.aac;
+screen -dm -S vlc /bin/bash cvlc --gain $VOL $URL;
+#if [ -z "$STY" ]; then exec screen -dm -S vlc /bin/bash cvlc --gain 0.8 https://icecast.radiofrance.fr/francemusique-hifi.aac; fi
+# cvlc --gain 0.8 https://icecast.radiofrance.fr/francemusique-hifi.aac

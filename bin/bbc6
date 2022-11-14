@@ -1,0 +1,14 @@
+#!/usr/bin/bash 
+if screen -list | grep -q "vlc"; then
+    echo "Server is running! Killing it"
+     /usr/bin/screen -SX vlc quit;
+else
+    echo "No Server found"
+fi	
+: ${URL:="http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/nonuk/sbr_low/ak/bbc_6music.m3u8"}
+VOL="${1:-0.8}"
+echo "Radio is $URL"
+echo "Volume is $VOL/1.0"
+# if [ -z "$STY" ]; then exec screen -dm -S vlc /bin/bash "$0"; fi
+screen -dm -S vlc /bin/bash cvlc --gain $VOL $URL;
+#if [ -z "$STY" ]; then exec screen -dm -S vlc /bin/bash cvlc --gain 0.8 https://icecast.radiofrance.fr/francemusique-hifi.aac; fi
