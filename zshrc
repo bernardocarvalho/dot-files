@@ -7,7 +7,6 @@
 #
 #If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-# export PATH="$HOME/bin:$HOME/.local/bin:$HOME/.platformio/penv/bin:$PATH"
 
 export ZSH="$HOME/.oh-my-zsh"
 # Path to your oh-my-zsh installation.
@@ -152,11 +151,9 @@ export GIT_ASKPASS=
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 # Optional configs
-[ -f ~/.esther.sh ] && source ~/.esther.sh
 [ -f ~/epics-env.sh ] && source ~/epics-env.sh
 [ -f ~/.xilinx.sh ] && source ~/.xilinx.sh
-[ -f ~/epicsenv.sh ] && source ~/epicsenv.sh
-[ -f ~/platformio.sh ] && source ~/platformio.sh
+[ -f ~/.zshrc.local ] && source ~/.zshrc.local
 
 #=======
 # alias get_idf='. $HOME/esp/esp-idf/export.sh'
