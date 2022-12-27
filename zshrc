@@ -108,7 +108,7 @@ case "$OSTYPE" in
   linux*)
     # ...
     export EDITOR='vim'
-    plugins=(git z fzf sudo alias-finder copypath copyfile web-search zsh-completions zsh-autosuggestions zsh-syntax-highlighting)
+    plugins=(git z fzf alias-finder copyfile web-search zsh-completions zsh-autosuggestions zsh-syntax-highlighting)
   ;;
   dragonfly*|freebsd*|netbsd*|openbsd*)
     # ...
