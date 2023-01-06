@@ -23,7 +23,6 @@ case "$OSTYPE" in
   ;;
   linux*)
     # ...
-    export ZSH="$HOME/.oh-my-zsh"
     export PATH=$HOME/bin:$PATH
   ;;
 esac
@@ -102,12 +101,10 @@ DISABLE_AUTO_UPDATE="true"
 case "$OSTYPE" in
   darwin*)
     # ...
-    export EDITOR='vim'
     plugins=(git z fzf sudo macos common-aliases docker alias-finder aliases copypath copyfile web-search brew zsh-completions zsh-autosuggestions zsh-syntax-highlighting)
   ;;
   linux*)
     # ...
-    export EDITOR='vim'
     plugins=(git z fzf alias-finder copyfile web-search zsh-completions zsh-autosuggestions zsh-syntax-highlighting)
   ;;
   dragonfly*|freebsd*|netbsd*|openbsd*)
@@ -126,6 +123,7 @@ source $ZSH/oh-my-zsh.sh
 export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
+export EDITOR='vim'
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
 # else
@@ -145,13 +143,12 @@ export GIT_ASKPASS=
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
+alias zshconfig="vim ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 # tmux=" TERM=xterm-256color tmux"
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 # Optional configs
-[ -f ~/epics-env.sh ] && source ~/epics-env.sh
 [ -f ~/.xilinx.sh ] && source ~/.xilinx.sh
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
 
