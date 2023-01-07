@@ -14,7 +14,7 @@ case "$OSTYPE" in
   darwin*)
     # ...
 #    export ZSH="/Users/bernardo/.oh-my-zsh"
-    export PATH="$HOME/bin:/opt/homebrew/opt/openjdk/bin:$PATH"
+    # export PATH="$HOME/bin:$PATH"
     # Setting for the new UTF-8 terminal support in
     export LC_CTYPE=en_US.UTF-8
     export LC_ALL=en_US.UTF-8
