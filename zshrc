@@ -15,16 +15,10 @@ case "$OSTYPE" in
   darwin*)
     # ...
 #    export ZSH="/Users/bernardo/.oh-my-zsh"
-    export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
-    # Setting for the new UTF-8 terminal support in
-    export LC_CTYPE=en_US.UTF-8
-    export LC_ALL=en_US.UTF-8
-#For compilers to find openjdk you may need to set:
-#  export CPPFLAGS="-I/opt/homebrew/opt/openjdk/include"
   ;;
   linux*)
     # ...
-    export ZSH="$HOME/.oh-my-zsh"
+#    export ZSH="$HOME/.oh-my-zsh"
   ;;
 esac
 
@@ -102,12 +96,16 @@ ZSH_THEME="robbyrussell"
 case "$OSTYPE" in
   darwin*)
     # ...
-    export EDITOR='vim'
     plugins=(git z fzf sudo macos common-aliases docker alias-finder aliases copypath copyfile web-search tmux brew zsh-completions zsh-autosuggestions zsh-syntax-highlighting)
   ;;
   linux*)
     # ...
-    export EDITOR='vim'
+ #   export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+    # Setting for the new UTF-8 terminal support in
+#For compilers to find openjdk you may need to set:
+#  export CPPFLAGS="-I/opt/homebrew/opt/openjdk/include"
+    export LC_CTYPE=en_US.UTF-8
+    export LC_ALL=en_US.UTF-8
     plugins=(git z fzf sudo alias-finder copypath copyfile web-search tmux zsh-completions zsh-autosuggestions zsh-syntax-highlighting)
   ;;
   dragonfly*|freebsd*|netbsd*|openbsd*)
@@ -127,6 +125,7 @@ source $ZSH/oh-my-zsh.sh
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
 
+export EDITOR='vim'
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
@@ -153,11 +152,9 @@ export GIT_ASKPASS=
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 # Optional configs
-[ -f ~/.esther.sh ] && source ~/.esther.sh
-[ -f ~/epics-env.sh ] && source ~/epics-env.sh
+# Optional configs
 [ -f ~/.xilinx.sh ] && source ~/.xilinx.sh
-[ -f ~/epicsenv.sh ] && source ~/epicsenv.sh
-[ -f ~/platformio.sh ] && source ~/platformio.sh
+[ -f ~/.zshrc.local ] && source ~/.zshrc.local
 
 #=======
 # alias get_idf='. $HOME/esp/esp-idf/export.sh'
