@@ -81,8 +81,41 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 "
 " Custom 
+"
+if !exists('g:env')
+    if has('win64') || has('win32') || has('win16')
+        let g:env = 'WINDOWS'
+    else
+        let g:env = toupper(substitute(system('uname'), '\n', '', ''))
+    endif
+endif
+
+" Use that global variable...
+if g:env =~ 'DARWIN'
+	" ... to do Mac OS X-specific stuff.
+  set rtp+=/opt/homebrew/opt/fzf
+endif
+
+if g:env =~ 'LINUX'
+	" ... to do Linux-specific stuff.
+    set rtp+=/usr/local/opt/fzf
+endif
+
+if g:env =~ 'WINDOWS'
+	" ... to do Windows-specific stuff.
+endif
+
+if g:env =~ 'CYGWIN'
+	" ... to do Cygwin-specific stuff.
+endif
+
+if g:env =~ 'MINGW'
+	" ... to do MinGW-specific stuff (Git Bash, mainly).
+endif
+
+
+
 " brew change
-set rtp+=/usr/local/opt/fzf
 " Put your non-Plugin stuff after this line
 " General {
 let mapleader = ','
