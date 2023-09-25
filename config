@@ -1,0 +1,63 @@
+# Copy this file to ~/.ssh/
+# IPFN private Network
+
+Host rpi4
+    HostName 10.136.241.199
+    User pi
+
+Host marte-sb
+    HostName 10.136.240.213
+    #    HostName 10.136.234.205
+    User bernardo
+    #ForwardX11 yes
+
+#Host marte-ppr
+    HostName 10.136.212.245
+    User bernardo
+
+Host beagle
+  #  link/ether 1c:ba:8c:9f:de:04 brd ff:ff:ff:ff:ff:ff
+    HostName 10.136.216.247
+    # sudo nmap -sn 10.136.192.0/18 | grep 1C:BA
+    User debian
+
+# Public Machines
+Host epics
+    HostName epics.ipfn.tecnico.ulisboa.pt
+    User bernardo
+
+Host fumanchu
+    HostName 193.136.137.182
+    User bernardo
+
+Host kane584
+    HostName kane584.tecnico.ulisboa.pt
+    User bernardo
+   # ForwardX11 yes
+
+Host esther
+    HostName esther.tecnico.ulisboa.pt
+    User bernardo
+
+
+# CTN VPN
+Host golem
+    HostName 10.10.136.177
+    # link/ether A0:36:9F:06:CE:CB
+    User esther
+    #ForwardX11 yes
+
+# ISTTOK prov Net
+Host rpi-isttok
+    HostName 192.168.1.110
+    User pi
+Host rpi-isttok2
+    HostName 192.168.1.120
+    User pi
+Host debian-timing
+    HostName 192.168.1.100
+    User oper
+Host debian-gps
+    HostName 192.168.1.152
+    User oper
+
