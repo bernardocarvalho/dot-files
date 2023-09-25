@@ -312,6 +312,7 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_python_python_exec = 'python3'
 let g:syntastic_python_checkers = ['python']
 let g:syntastic_cpp_config_file = '.syntastic_cpp_config'
+let g:syntastic_c_config_file = '.syntastic_c_config'
 " ctrlp
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
