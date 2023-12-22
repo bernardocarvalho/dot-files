@@ -96,17 +96,16 @@ ZSH_THEME="robbyrussell"
 case "$OSTYPE" in
   darwin*)
     # ...
-    plugins=(git z fzf sudo macos common-aliases docker alias-finder aliases copypath copyfile web-search tmux brew zsh-completions zsh-autosuggestions zsh-syntax-highlighting)
+    plugins=(git z fzf macos common-aliases docker alias-finder copypath copyfile web-search tmux brew zsh-completions zsh-autosuggestions zsh-syntax-highlighting)
   ;;
   linux*)
     # ...
- #   export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
     # Setting for the new UTF-8 terminal support in
 #For compilers to find openjdk you may need to set:
 #  export CPPFLAGS="-I/opt/homebrew/opt/openjdk/include"
     export LC_CTYPE=en_US.UTF-8
     export LC_ALL=en_US.UTF-8
-    plugins=(git z fzf sudo alias-finder copypath copyfile web-search tmux zsh-completions zsh-autosuggestions zsh-syntax-highlighting)
+    plugins=(git z fzf python tmux zsh-completions zsh-autosuggestions zsh-syntax-highlighting)
   ;;
   dragonfly*|freebsd*|netbsd*|openbsd*)
     # ...
@@ -146,15 +145,14 @@ export GIT_ASKPASS=
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+alias zshconfig="vim ~/.zshrc"
+alias ohmyzsh="vim ~/.oh-my-zsh"
 # tmux=" TERM=xterm-256color tmux"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-# Optional configs
-# Optional configs
-[ -f ~/.xilinx.sh ] && source ~/.xilinx.sh
+# Local configs
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
+#test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 #=======
 # alias get_idf='. $HOME/esp/esp-idf/export.sh'
@@ -170,5 +168,4 @@ export GIT_ASKPASS=
 #  eval "$(pyenv virtualenv-init -)"
 #fi
 
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
