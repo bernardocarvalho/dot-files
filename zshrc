@@ -105,7 +105,7 @@ case "$OSTYPE" in
 #  export CPPFLAGS="-I/opt/homebrew/opt/openjdk/include"
     export LC_CTYPE=en_US.UTF-8
     export LC_ALL=en_US.UTF-8
-    plugins=(git z fzf python tmux zsh-completions zsh-autosuggestions zsh-syntax-highlighting)
+    plugins=(git z dotenv fzf python tmux zsh-completions zsh-autosuggestions zsh-syntax-highlighting)
   ;;
   dragonfly*|freebsd*|netbsd*|openbsd*)
     # ...
