@@ -96,9 +96,11 @@ ZSH_THEME="robbyrussell"
 case "$OSTYPE" in
   darwin*)
     # ...
-    plugins=(git z fzf macos common-aliases docker alias-finder copypath copyfile web-search tmux brew zsh-completions zsh-autosuggestions zsh-syntax-highlighting)
+    plugins=(git z fzf sudo macos common-aliases docker alias-finder aliases copypath copyfile web-search tmux brew zsh-completions zsh-autosuggestions zsh-syntax-highlighting)
+    FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
   ;;
   linux*)
+
     # ...
     # Setting for the new UTF-8 terminal support in
 #For compilers to find openjdk you may need to set:
