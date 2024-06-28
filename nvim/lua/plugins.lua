@@ -16,23 +16,23 @@ return {
             "hrsh7th/cmp-buffer", -- buffer auto-completion
             "hrsh7th/cmp-path", -- path auto-completion
             "hrsh7th/cmp-cmdline", -- cmdline auto-completion
-            {
-                "zbirenbaum/copilot.lua",
-                --opts = {},
-                config = function()
-                    require("copilot").setup({
-                        suggestion = { enabled = false },
-                        panel = { enabled = false },
-                    })
-                end,
-            },
-            {
-                "zbirenbaum/copilot-cmp",
-                config = function ()
-                    require("copilot_cmp").setup()
-                end
-               -- opts = {},
-            },
+            -- {
+            --     "zbirenbaum/copilot.lua",
+            --     --opts = {},
+            --     config = function()
+            --         require("copilot").setup({
+            --             suggestion = { enabled = false },
+            --             panel = { enabled = false },
+            --         })
+            --     end,
+            -- },
+            -- {
+            --     "zbirenbaum/copilot-cmp",
+            --     config = function ()
+            --         require("copilot_cmp").setup()
+            --     end
+            --    -- opts = {},
+            -- },
         },
         config = function()
             require("config.nvim-cmp")
