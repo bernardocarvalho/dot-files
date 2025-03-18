@@ -12,9 +12,9 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require('options')    
+require('options')
 require('keymaps')
--- require('plugins')        
-require("lazy").setup("plugins")    
+-- require('plugins')
+require("lazy").setup("plugins")
 require('colorscheme')
 require('lsp')
